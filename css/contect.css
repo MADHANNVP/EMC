@@ -1,0 +1,63 @@
+*{
+    padding:0;
+    margin:0;
+}
+.container{
+    padding:30px;
+}
+.section--one{
+    background-color:black;
+    color:white;
+    padding:30px;
+}
+.section--one--name{
+    padding-bottom:10px;
+}
+.section--one--desc{
+    padding-bottom:5px;
+    font-size: 20px;
+}
+.section--one--contect{
+    color:white;
+    background:orangered;
+    border:none;
+    padding:5px;
+    cursor:pointer;
+}
+.section--one--contect a{
+   color:white;
+   text-decoration:none;    
+}
+.section--five{
+    background-color: black;
+    color:white;
+    padding:20px;
+}
+.section--five a{
+    color:aqua;
+}
+.section--two{
+    margin:20px;
+}
+.section--two--name{
+   padding:10px;
+   margin:4px;
+   border:none;
+   border-bottom:solid 1px black;
+}
+.section--two--email{
+    padding:10px;
+    margin:4px;
+    border:none;
+    border-bottom:solid 1px black;
+ }
+ .section--two--textarea{
+    padding:10px;
+    margin-top: 5px;
+ }
+ .section--two--submit{
+    padding:10px;
+    background-color:orangered;
+    border:none;
+    cursor:pointer;
+ }

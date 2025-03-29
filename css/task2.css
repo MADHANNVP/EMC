@@ -1,0 +1,90 @@
+*{
+    padding:0;
+    margin:0;
+}
+.container{
+    padding:20px;
+}
+.section--one{
+    margin:10px;
+    background-color:black;
+    color:white;
+    padding:10px;
+    text-align:center;
+}
+.section--one--desc a{
+    color:rgba(163, 140, 140, 0.349);
+}
+.section--two{
+    margin:10px;
+    text-align:center;
+}
+.section--two--partone{
+    width:221px;
+    height:auto;
+    display:inline-block;
+    margin:5px;
+    text-align: center;
+    border:3px solid black;
+}
+.section--two--desc{
+    text-align:center;
+}
+.section--two--order{
+    margin-bottom:none;
+    padding:8px;
+    text-align:center;
+    background-color: black;
+    color:white;
+    border:none;
+}
+.section--two--parttwo{
+    width:220px;
+    height:auto;
+    display:inline-block;
+    margin:5px;
+    text-align: center;
+    border:3px solid black;
+}
+.section--two--partthree{
+    width:219px;
+    height:auto;
+    display:inline-block;
+    margin:5px;
+    text-align: center;
+    border:3px solid black;
+}
+.section--two--partfour{
+    width:222px;
+    height:auto;
+    display:inline-block;
+    margin:5px;
+    text-align: center;
+    border:3px solid black;
+}
+.section--three{
+    background-color:black;
+    color:white;
+    text-align:center;
+}
+form{
+    text-align: center;
+} 
+.section--three--sand{
+    width:400px;
+    height:35px;
+    background-color:yellow;
+}
+.section--three--name{
+    padding:10px;
+}
+.section--three--age{
+    padding:10px;
+}
+.section--three--email{
+    padding:10px;
+}
+/* .section--three--form{
+    text-align: center;
+    color:aqua;
+} */

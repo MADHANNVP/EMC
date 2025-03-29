@@ -1,0 +1,85 @@
+*{
+    padding:0;
+    margin:0;
+    font-family: "Young Serif", serif;
+}
+.container{
+    padding:30px;
+}
+.section--one,.section--two,.section--three,.section--four,.section--five{
+    margin:20px;
+}
+.section--three--desc li,.section--four--decs{
+    list-style-type:none;
+}
+.section--one{
+    background-color:black;
+    color:white;
+    padding:30px;
+}
+.section--one--name{
+    padding-bottom:10px;
+}
+.section--one--desc{
+    padding-bottom:5px;
+    font-size: 25px;
+}
+.section--one--contect{
+    color:white;
+    background:orangered;
+    border:none;
+    padding:5px;
+    cursor:pointer;
+}
+.section--one--contect a{
+   color:white;
+   text-decoration:none;    
+}
+.section--two--title{
+   margin-bottom: 5px;
+}
+.section--three{
+    display: inline-block;
+    height:200px;
+    width:200px;
+    background-color: rgb(74, 9, 224);
+    color:white;
+    padding:5px;
+    border-radius: 10px;
+    vertical-align:top;
+}
+.section--three--heading{
+ margin: 10px;
+}
+.section--three--desc{
+    margin:10px;
+}
+.section--four{
+    display:inline-block;
+    height:200px;
+    vertical-align:top;
+    background-color:orangered;
+    color:white;
+    border-radius:10px;
+    padding:5px;
+}
+.section--four--heading{
+    margin:10px;
+}
+.section--four--decs{
+    margin:10px;
+}
+.section--four h1{
+    font-size:25px;
+}
+.section--four p{
+    font-size:15px;
+}
+.section--five{
+    background-color: black;
+    color:white;
+    padding:20px;
+}
+.section--five a{
+    color:aqua;
+}
