@@ -88,3 +88,48 @@
     width:100%;
     height:400px;
 }
+.recomended--course--img{
+    width:200px;
+    height:150px;
+}
+.recommended--s1{
+    display: flex;
+    padding:10px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.topics ul{
+  display:flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  flex-wrap: wrap;
+  width:100%;
+}
+.topics ul li {
+    flex-shrink: 0;
+    width:17%;
+    padding:10px;
+    border:1px solid black;
+    margin: 2px 15px;
+    flex-grow: 1;
+}
+footer{
+    color:white;
+    background-color: black;
+}
+.section1{
+    display: flex;
+    padding:20px;
+}
+.section1 .section1--one p{
+    padding:8px;
+}
+.section1 .section1--two p{
+    padding:8px;
+}
+.section2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
