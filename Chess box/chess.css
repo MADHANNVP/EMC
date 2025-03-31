@@ -1,0 +1,34 @@
+*{
+    padding:0;
+    margin:0;
+}
+.container{
+    margin:20px auto;
+    width:800px;
+    height:800px;
+    border:1px solid blue;
+}
+.boxone,.boxtwo{
+    
+    width:800px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    background-color: black;
+    color: white;
+    height: 100px;
+    width:100px;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:80px;
+}
+.box1{
+    background-color: aliceblue;
+    color:black;
+    float: left;
+}
