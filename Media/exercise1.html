@@ -1,55 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media</title>
     <style>
-        .navbar{
-            background-color:black;
-            color:white;
-            padding:10px;
-            display:flex;
-            justify-content:space-between;
+        .navbar {
+            background-color: black;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
             align-items: center;
         }
-        .navbar_link{
-            display:flex;
-            gap:10px;
-            align-items:center;
+
+        .navbar_link {
+            display: flex;
+            gap: 10px;
+            align-items: center;
         }
-        .container{
-            display:flex;
-            gap:10px;
+
+        .container {
+            display: flex;
+            gap: 10px;
         }
-        .one{
-            width:100px;
-            height:100px;
-            background-color:rgb(201, 13, 201);
+
+        .one {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(201, 13, 201);
         }
-        .two{
-            width:100px;
-            height:100px;
-            background-color:aqua;
+
+        .two {
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
         }
-        @media screen and (max-width:600px){
-         .navbar_link{
-            display:none;
-         }
-         .box{
-            font-size:10px;
-         }
-        }
-        @media screen and (max-width:600px){
-            .two{
-                display:none;
+
+        @media screen and (max-width:600px) {
+            .navbar_link {
+                display: none;
             }
-            .one{
-                border-radius:50%;
+
+            .box {
+                font-size: 10px;
             }
         }
-        </style>
+
+        @media screen and (max-width:600px) {
+            .two {
+                display: none;
+            }
+
+            .one {
+                border-radius: 50%;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <div class="navbar">
         <h1>Madhan</h1>
@@ -74,4 +84,5 @@
         <h1>Hello How are You??</h1>
     </div>
 </body>
+
 </html>
