@@ -7,253 +7,12 @@
     <title>Trip Advisor</title>
     <link rel="icon" href="image/tripadvisor-icon.png">
     <link rel="stylesheet" href="trip_advisor.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        * {
-            padding: 0;
-            margin: 0;
-        }
 
-        nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 10px;
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 70%;
-            margin: 10px;
-        }
-
-        .sidebar {
-            width: 40px;
-            flex-shrink: 0;
-            font-size: 20px;
-            background: none;
-            border: none;
-            outline: none;
-            color: white;
-            cursor: pointer;
-            padding: 10px;
-            display: none;
-            flex-direction: column;
-            gap: 4px;
-            justify-content: space-evenly;
-            align-items: center;
-            margin: 0 10px;
-        }
-
-        .sidebar span {
-            width: 100%;
-            height: 2px;
-            background-color: black;
-            border-radius: 25px;
-        }
-
-        .navbar .logo {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-        }
-
-        .navbar .logo img {
-            width: 40px;
-            height: 40px;
-        }
-
-        .logo_tripadvisor {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: transparent;
-            border: none;
-            outline: none;
-        }
-
-        .navbar .section_1--one {
-            display: flex;
-            font-weight: 600;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .section_1--one--part4 {
-            padding: 12px 15px;
-        }
-
-        .section_1--one--part4:hover {
-            opacity: 0.8;
-            text-decoration: underline;
-            cursor: pointer;
-        }
-
-        .section_1--one--part3 {
-            padding: 12px 15px;
-            border-radius: 25px;
-        }
-
-        .section_1--one--part3:hover {
-            background-color: #F2F2F2;
-            cursor: pointer;
-        }
-
-        .section_1--one--part2 {
-            padding: 12px 15px;
-            border-radius: 25px;
-        }
-
-        .section_1--one--part2:hover {
-            background-color: #F2F2F2;
-            cursor: pointer;
-        }
-
-        .section_1--one--part1 {
-            padding: 12px 15px;
-            border-radius: 25px;
-        }
-
-        .section_1--one--part1:hover {
-            background-color: #F2F2F2;
-            cursor: pointer;
-        }
-
-        .navbar .section_1--two {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            width: 20%;
-            height: 50px;
-        }
-
-        .navbar .section_1--two .button1 {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            align-items: center;
-            border: none;
-            background-color: transparent;
-            padding: 8px 12px;
-            border-radius: 25px;
-            cursor: pointer;
-
-        }
-
-        .navbar .section_1--two .button1 .bar {
-            font-size: 25px;
-            color: rgb(213, 224, 235);
-        }
-
-        .navbar .section_1--two .button1:hover {
-            background-color: #F2F2F2;
-        }
-
-        .navbar .section_1--two .button1 img {
-            width: 20px;
-            height: 20px;
-        }
-
-        .navbar .section_1--two .button2 {
-            padding: 15px;
-            border: none;
-            background-color: black;
-            color: white;
-            border-radius: 25px;
-            cursor: pointer;
-            flex-shrink: 0;
-        }
-
-        .navbar .section_1--two .button2:hover {
-            opacity: 0.8;
-        }
-
-        .navbar .logo .profile {
-            background-color: white;
-            border: none;
-            outline: none;
-            display: none;
-        }
-
-        .navbar .logo .profile img {
-            width: 25px;
-            background-color: white;
-            height: 25px;
-        }
-        
-        .navbar .logo .logo_tripadvisor h1 {
-            font-size: 30px;
-        }
-        /* section 2 */
-         .Section-2 {
-            display:flex;
-            justify-content: center;
-            align-items: center;
-         }
-         .Section_1 h1{
-            text-align: center;
-         }
-
-        @media screen and (max-width:1000px) {
-            .navbar {
-                width: 100%;
-                justify-content: space-between;
-            }
-
-            .sidebar {
-                display: flex;
-            }
-
-            .section_1--one,
-            .section_1--one--part1,
-            .section_1--one--part2,
-            .section_1--one--part3,
-            .section_1--one--part4 {
-                display: none;
-            }
-
-            .navbar .section_1--two .button1 {
-                display: none;
-            }
-            
-            .navbar .logo .logo_tripadvisor h1 {
-                font-size: 25px;
-            }
-        }
-        
-        @media screen and (max-width:750px) {
-            .navbar .logo .profile {
-                display: block;
-            }
-
-            .navbar .section_1--two .button2,
-            .section_1--two,
-            .section_1--two .button1,
-            .section_1--two {
-                display: none;
-                width: 0;
-            }
-
-            .navbar {
-                width: 100%;
-            }
-
-            .navbar .logo {
-                justify-content: space-between;
-                width: 100%;
-            }
-
-            .navbar .section_1--two {
-                display: none;
-            }
-
-            .navbar .logo .logo_tripadvisor h1 {
-                font-size: 20px;
-            }
-        }
     </style>
 </head>
 
@@ -289,8 +48,277 @@
     <div class="Section-2">
         <h1>Where to?</h1>
     </div>
-    <main>
-    </main>
+    <div class="section-3">
+        <p><i class="fa-solid fa-house"></i>Search All</p>
+        <p><i class="fa-solid fa-bed"></i>Hotels</p>
+        <p><i class="fa-solid fa-camera"></i>Things to Do</p>
+        <p><i class="fa-solid fa-utensils"></i>Restaurants</p>
+        <p><i class="fa-solid fa-plane"></i>Flights</p>
+        <p><i class="fa-solid fa-house-user"></i>Holiday Homes</p>
+    </div>
+    <div class="section-4">
+        <p><i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Places to go, things to do, hotels...">
+        </p>
+        <button>Search</button>
+    </div>
+    <div class="section-5">
+        <img src="image/section-5.jpg" alt="">
+        <div class="section-5--img">
+            <h1>Plan a trip that's so you</h1>
+            <h3>Get custome recs tailored to you,and build a one-of-a-kind trip</h3>
+            <button>Continue in the app</button>
+        </div>
+    </div>
+    <div class="section-6">
+        <h1 class="section-10--heading">Explore the world's most stunning seasdes</h1>
+        <p class="section-10--desc">2025's Travellers's Choice Awards Best of the Best Beacher</p>
+        <div class="section-6--image">
+            <div class="section-6--image--one"><img src="image/section6-1.jpg" alt="">
+                <h1>World</h1>
+            </div>
+            <div class="section-6--image--two"><img src="image/section6-2.jpg" alt="">
+                <h1>Europe</h1>
+            </div>
+            <div class="section-6--image--three">
+                <img src="image/section6-3.jpg" alt="">
+                <h1>Asia</h1>
+            </div>
+            <div class="section-6--image--four">
+                <img src="image/section6-4.jpg" alt="">
+                <h1>South Pacific</h1>
+            </div>
+        </div>
+    </div>
+    <div class="section-7">
+        <h1>Ways to tour Chennai(Madras)</h1>
+        <p>Book these experiences for a close up look at Chennai(Madras)</p>
+        <div class="section-7--image ">
+            <div class="section-7--image--one">
+                <img src="image/section7-1.jpg" alt="">
+                <p><b>Mahabalipuram tour by Tourism <br> Ministry approved company</b>
+                <p>
+                <p>4.9 🟢🟢🟢🟢🟢(291)</p>
+                <p>from $8,319 per adult</p>
+            </div>
+            <div class="section-7--image--two">
+                <img src="image/section7-2.jpg" alt="">
+                <p><b>Exploring Mylapore: A Cultural & <br> Historical Walking Tour</b></p>
+                <p>4.9 🟢🟢🟢🟢🟢(32)</p>
+                <p>from $2,364 per adult</p>
+
+            </div>
+            <div class="section-7--image--three"><img src="image/section7-3.jpg" alt="">
+                <p><b>Mahabalipuram tour by Tourism <br>Ministry approved company</b>
+                <p>
+                <p>4.9 🟢🟢🟢🟢🟢(291)</p>
+                <p>from $8,319 per adult</p>
+            </div>
+            <div class="section-7--image--four"> <img src="image/section7-4.jpg" alt="">
+                <p><b>Exploring Mylapore: A Cultural & <br> Historical Walking Tour</b></p>
+                <p>4.9 🟢🟢🟢🟢🟢(32)</p>
+                <p>from $2,364 per adult</p>
+            </div>
+        </div>
+    </div>
+    <div class="section-8">
+        <h1>More to explore</h1>
+        <div class="section-8--image">
+            <div class="section-8--one">
+                <img src="image/section8-1.jpg" alt="">
+                <p>7 Bangkok hotels that highlight <br> thailand's spectacular architecture</p>
+            </div>
+            <div class="section-8--two">
+                <img src="image/section8-2.jpg" alt="">
+                <p>3 days in Tokyo: The perfect itinerary</p>
+            </div>
+            <div class="section-8--three">
+                <img src="image/section8-3.jpg" alt="">
+                <p>Where Bali's best chefs go on their days off</p>
+            </div>
+        </div>
+    </div>
+    <div class="section-6">
+        <h1 class="section-9--heading">Dream Your Next Trip</h1>
+        <p class="section-9--desc">Weekend getaways from Chennai(Madras)</p>
+        <div class="section-6--image">
+            <div class="section-6--image--one"><img src="image/section9-1.jpg" alt="">
+                <h1>Mahabalipuram,<br>India</h1>
+            </div>
+            <div class="section-6--image--two"><img src="image/section9-2.jpg" alt="">
+                <h1>Bengalure,<br>India</h1>
+            </div>
+            <div class="section-6--image--three">
+                <img src="image/section9-3.jpg" alt="">
+                <h1>Tiruchiappalli,<br>India</h1>
+            </div>
+            <div class="section-6--image--four">
+                <img src="image/section9-4.jpg" alt="">
+                <h1>Tirupati,<br>India</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- section 11 -->
+    <div class="section-6">
+        <h2 class="section-11--heading">Top destinations for your next holiday</h2>
+        <div class="section-6--image">
+            <div class="section-6--image--one"><img src="image/section11-1.jpg" alt="">
+                <h1>Rome,Italy</h1>
+            </div>
+            <div class="section-6--image--two"><img src="image/section11-2.jpg" alt="">
+                <h1>Paris,France</h1>
+            </div>
+            <div class="section-6--image--three">
+                <img src="image/section11-3.jpg" alt="">
+                <h1>Las Vegas,NV</h1>
+            </div>
+            <div class="section-6--image--four">
+                <img src="image/section11-4.jpg" alt="">
+                <h1>Reykjavik, <br>
+                    lceland</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- section 12 -->
+    <div class="section-6">
+        <h2 class="section-12--heading">Top destinations for your next holiday</h2>
+        <p class="section-12--desc">Here's Where your fellow travellers are headed</p>
+        <div class="section-6--image">
+            <div class="section-6--image--one"><img src="image/section12-1.jpg" alt="">
+                <h1>Bangkok, <br>Thailand</h1>
+            </div>
+            <div class="section-6--image--two"><img src="image/section12-2.jpg" alt="">
+                <h1>Singapore, <br>Singapore
+                </h1>
+            </div>
+            <div class="section-6--image--three">
+                <img src="image/section12-3.jpg" alt="">
+                <h1>Mumbai,<br>India</h1>
+            </div>
+            <div class="section-6--image--four">
+                <img src="image/section12-4.jpg" alt="">
+                <h1>Bali,<br>Indonesia</h1>
+            </div>
+        </div>
+    </div>
+    <!-- section 13 -->
+    <div class="section-13">
+        <div class="section-13--image">
+            <img src="image/section13.jpg" alt="">
+        </div>
+        <div class="section-13--desc">
+            <p class="section-13--desc--s1"><img src="image/tripadvisor-icon.png" alt=""> Sponsored by Wanderlab</p>
+            <h1 class="section-13--desc--s2">Watch The Wanderer</h1>
+            <p class="section-13--desc--s3">Tripadivisor's award-winning travel series,now <br>Streaming on Amazone
+                Prime Vedio
+            </p>
+            <button>Learn More</button>
+        </div>
+    </div>
+    <!-- section 14 -->
+    <div class="section-14">
+        <h1 class="section-14--heading">Home Rentals Near You</h1>
+        <div class="section-14--desc">
+            <div class="section-14--desc--one">
+                <h3>We think you'd enjoy <br> these homese for a quick <br> trip out of town.</h3>
+            </div>
+            <div class="section-14--desc--one">
+                <img src="image/section14-1.jpg" alt="">
+                <p>Rentals in Mahabalipuram</p>
+                <p>10 Rentals</p>
+            </div>
+            <div class="section-14--desc--one one">
+                <img src="image/section14-2.jpg" alt="">
+                <p>Rentals in Thanjavur</p>
+                <p>10 Rentals</p>
+            </div>
+            <div class="section-14--desc--one">
+                <img src="image/section14-3.jpg" alt="">
+                <p>Rentals in Bengalure</p>
+                <p>172 Rentals</p>
+            </div>
+        </div>
+    </div>
+    <!-- section 15 -->
+    <div class="section-15">
+        <img src="image/section15-2.png" alt="">
+    </div>
+    <div class="section-16">
+        <div class="section-16--desc">
+            <div class="section-16--one">
+                <p>About Tripadvisor</p>
+                <P>About Us</P>
+                <P>Press</P>
+                <P>Resourcess and Policles</P>
+                <P>Careers</P>
+                <P>Trust & Us</P>
+                <P>Contact Us</P>
+                <P>Accessibility Statement</P>
+            </div>
+            <div class="sctiont-16--two">
+                <p>Explore</p>
+                <p>Write a review</p>
+                <p>Add a Place</p>
+                <p>Join</p>
+                <p>Travellers'Choice</p>
+                <p>Help Centre</p>
+                <p>Travel Stories</p>
+            </div>
+            <div class="section-16--three">
+                <p>Do Business With Us</p>
+                <p>Owner & DMO/CVB</p>
+                <p>Business Advantage</p>
+                <p>Sponsored Placements</p>
+                <p>Acess our Content API</p>
+                <p>Get The App</p>
+                <p>iphone App</p>
+                <p>Android App</p>
+            </div>
+            <div class="section-16-four">
+
+            </div>
+            <div class="sction-16-five">
+                <p>Tripadvisor Sites</p>
+                <p>Book Tours and Attraction Tickets on Viator</p>
+            </div>
+        </div>
+        <div class="section-16--two">
+            <div class="section-16--two--part1">
+                <img src="image/tripadvisor-icon.png" alt="">
+            </div>
+            <div class="section-16--two--part2">
+                <p>&copy;2025 Tripadivisor LLC ALL rights reserved.</p>
+                <div class="box">
+                    <p>Terms of Use</p>
+                    <p>Privacy and Cookies Statement</p>
+                    <p>Cookie consent </p>
+                    <p>Site Map</p>
+                    <p>How the Site Works</p>
+                    <p>Contact Us</p>
+                </div>
+
+            </div>
+            <div class="section-16--two--part3">
+                <button>INR</button><button>India</button>
+            </div>
+        </div>
+        <div class="contact">
+            <p><i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-x-twitter"></i>
+                <i class="fa-brands fa-pinterest"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-tiktok"></i>
+            </p>
+        </div>
+        <div class="final">
+            <p>This is the version of our website addressed to speakers of English in India. If you are a resident of
+                another country or region, please select the appropriate version of Tripadvisor for your country or
+                region in the drop-down menu. Show more</p>
+        </div>
+    </div>
 </body>
 
 </html>

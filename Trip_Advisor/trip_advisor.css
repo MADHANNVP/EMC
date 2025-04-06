@@ -1,0 +1,926 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    position: sticky;
+    top: 0px;
+    background-color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    margin: 10px;
+}
+
+.sidebar {
+    width: 40px;
+    flex-shrink: 0;
+    font-size: 20px;
+    background: none;
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.sidebar span {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    border-radius: 25px;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.navbar .logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.logo_tripadvisor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.navbar .section_1--one {
+    display: flex;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+}
+
+.section_1--one--part4 {
+    padding: 12px 15px;
+}
+
+.section_1--one--part4:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.section_1--one--part3 {
+    padding: 12px 15px;
+    border-radius: 25px;
+}
+
+.section_1--one--part3:hover {
+    background-color: #F2F2F2;
+    cursor: pointer;
+}
+
+.section_1--one--part2 {
+    padding: 12px 15px;
+    border-radius: 25px;
+}
+
+.section_1--one--part2:hover {
+    background-color: #F2F2F2;
+    cursor: pointer;
+}
+
+.section_1--one--part1 {
+    padding: 12px 15px;
+    border-radius: 25px;
+}
+
+.section_1--one--part1:hover {
+    background-color: #F2F2F2;
+    cursor: pointer;
+}
+
+.navbar .section_1--two {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 20%;
+    height: 50px;
+}
+
+.navbar .section_1--two .button1 {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    padding: 8px 12px;
+    border-radius: 25px;
+    cursor: pointer;
+
+}
+
+.navbar .section_1--two .button1 .bar {
+    font-size: 25px;
+    color: rgb(213, 224, 235);
+}
+
+.navbar .section_1--two .button1:hover {
+    background-color: #F2F2F2;
+}
+
+.navbar .section_1--two .button1 img {
+    width: 20px;
+    height: 20px;
+}
+
+.navbar .section_1--two .button2 {
+    padding: 15px;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.navbar .section_1--two .button2:hover {
+    opacity: 0.8;
+}
+
+.navbar .logo .profile {
+    background-color: white;
+    border: none;
+    outline: none;
+    display: none;
+}
+
+.navbar .logo .profile img {
+    width: 25px;
+    background-color: white;
+    height: 25px;
+}
+
+.navbar .logo .logo_tripadvisor h1 {
+    font-size: 30px;
+}
+
+/* section 2 */
+.Section-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+
+.Section-2 h1 {
+    text-align: center;
+    font-size: 50px;
+}
+
+/* section 3 */
+.section-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    z-index: 888;
+    top: 80px;
+    background-color: white;
+    gap: 10px;
+}
+
+.section-3 p {
+    display: flex;
+    gap: 4px;
+}
+
+.section-3 p:nth-of-type(1) {
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+
+.section-3 p:nth-of-type(1):hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.section-3 p:nth-of-type(2) {
+    padding: 10px;
+    border-bottom: 1px solid white;
+}
+
+.section-3 p:nth-of-type(2):hover {
+    border-bottom: 1px solid black;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.section-3 p:nth-of-type(3) {
+    padding: 10px;
+    border-bottom: 1px solid white;
+}
+
+.section-3 p:nth-of-type(3):hover {
+    border-bottom: 1px solid black;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.section-3 p:nth-of-type(4) {
+    padding: 10px;
+    border-bottom: 1px solid white;
+}
+
+.section-3 p:nth-of-type(4):hover {
+    border-bottom: 1px solid black;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.section-3 p:nth-of-type(5) {
+    padding: 10px;
+    border-bottom: 1px solid white;
+}
+
+.section-3 p:nth-of-type(5):hover {
+    border-bottom: 1px solid black;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.section-3 p:nth-of-type(6) {
+    padding: 10px;
+    border-bottom: 1px solid white;
+}
+
+.section-3 p:nth-of-type(6):hover {
+    border-bottom: 1px solid black;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+/* .section-4 */
+.section-4 {
+    display: flex;
+    margin: 20px auto;
+    border-radius: 25px;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    padding: 5px 5px 5px 12px;
+    width: 50%;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.section-4 p i {
+    font-size: 18px;
+}
+
+.section-4 p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.section-4 p input {
+    padding: 10px;
+    width: 100%;
+    border: none;
+    outline: none;
+
+}
+
+.section-4 button {
+    padding: 12px 18px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    background-color: #34E0A1;
+}
+
+.section-4 button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+/* .section-5 */
+.section-5 {
+    width: 70%;
+    margin: 10px auto;
+    background-color: #33E0A1;
+    display: flex;
+    flex-direction: row;
+}
+
+.section-5 .section-5--img {
+    font-size: 25px;
+    margin: auto;
+    padding: 30px;
+}
+
+.section-5 .section-5--img button {
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    margin: 10px 5px;
+    cursor: pointer;
+}
+
+.section-5 .section-5--img button:hover {
+    opacity: 0.8;
+}
+
+.section-5 img {
+    width: 70%;
+}
+
+.section-6 {
+    width: 70%;
+    margin: 20px auto;
+}
+
+.section-6--image {
+    display: flex;
+    /* flex-wrap: wrap; */
+    overflow: hidden;
+}
+
+.section-6--image--one {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    margin: 10px;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.section-6--image--one:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.section-6--image--two {
+    position: relative;
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.section-6--image--two:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.section-6--image--three {
+    position: relative;
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.section-6--image--three:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.section-6--image--four {
+    position: relative;
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+    flex-shrink: 1;
+    flex-grow: 1;
+}
+
+.section-6--image--four:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.section-6--image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.section-6--image h1 {
+    color: white;
+    width: 100%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    position: absolute;
+    bottom: 2px;
+}
+
+/* section 7 */
+/* .section-7{
+    width:70%;
+    margin:20px auto;
+}
+.section-7--image{
+display: flex;
+flex-wrap: wrap;
+gap:10px
+}
+.section-7--image--one{
+width:210px;
+flex-shrink: 1;
+flex-grow: 1;
+}
+.section-7--image--two{
+width:210px;
+flex-shrink: 1;
+flex-grow: 1;
+}
+.section-7--image--three{
+width:210px;
+flex-shrink: 1;
+flex-grow: 1;
+}
+.section-7--image--four{
+width:210px;
+flex-shrink: 1;
+flex-grow: 1;
+}
+.section-7--image--one img{
+width:200px;
+margin: 10px;
+flex-grow: 1;
+}
+.section-7--image--two img{
+width:200px;
+margin: 10px;
+flex-grow: 1;
+}
+.section-7--image--three img{
+width:200px;
+margin: 10px;
+flex-grow: 1;
+}
+.section-7--image--four img{
+width:200px;
+margin: 10px;
+flex-shrink: 1;
+flex-grow: 1;
+} */
+.section-8 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    background-color: #F2F1EC;
+    overflow: hidden;
+}
+
+.section-8 h1 {
+    width: 70%;
+    float: left;
+    padding: 20px;
+}
+
+.section-8--image {
+    width: 70%;
+    display: flex;
+    gap: 10px;
+    justify-content: space-evenly;
+}
+
+.section-8--one img {
+    width: 300px;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.section-8--one img:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.section-8--one p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.section-8--two img {
+    width: 300px;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.section-8--two img:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.section-8--two p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.section-8--three img {
+    width: 300px;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.section-8--three img:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.section-8--three p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.section-7 {
+    width: 70%;
+    margin: 20px auto;
+    overflow: hidden;
+    /* overflow:hidden; */
+}
+
+.section-7--image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.section-7--image--one {
+    flex-shrink: 1;
+}
+
+.section-7--image img {
+    width: 250px;
+
+}
+
+.section-9--heading {
+    padding: 20px 10px 2px 10px;
+}
+
+.section-9--desc {
+    font-size: 18px;
+    padding: 10px;
+}
+
+.section-11--heading {
+    padding: 20px 10px 10px 10px;
+}
+
+.section-12--heading {
+    padding: 20px 10px 10px 10px;
+
+}
+
+.section-12--desc {
+    font-size: 18px;
+    padding: 10px;
+}
+
+.section-13 {
+    width: 70%;
+    display: flex;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: #F2ECF9;
+}
+
+.section-13--image {
+    width: 100%;
+    height: auto;
+}
+
+.section-13--image img {
+    width: 400px;
+}
+
+.section-13--desc img {
+    width: 16px;
+    height: 16px;
+}
+
+.section-13--desc {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-13--desc .section-13--desc--s1 {
+    padding: 10px;
+    font-size: 18px;
+
+}
+
+.section-13--desc .section-13--desc--s2 {
+    padding: 10px;
+}
+
+.section-13--desc .section-13--desc--s3 {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.section-13--desc button {
+    padding: 15px 25px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+.section-13--desc button:hover {
+    opacity: 0.8;
+}
+
+.section-14 {
+    width: 70%;
+    margin: 10px auto;
+}
+
+.section-14--desc {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.section-14--desc--one {
+    width: 200px;
+    height: 150px;
+    flex-grow: 1;
+}
+
+.one {
+    padding: 10px;
+}
+
+.section-14--desc--one img {
+    width: 200px;
+    height: 170px;
+    border-radius: 5px;
+}
+
+.section-14--heading {
+    padding: 15px;
+}
+
+.section-15 {
+    width: 100%;
+    margin: 20px 0px;
+    overflow: hidden;
+}
+
+.section-15 {
+    background-size: cover;
+}
+
+.section-16 {
+    width: 100%;
+    background-color: #F2F2F2;
+}
+
+.section-16--desc {
+    margin: 10px auto;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+}
+
+.section-16--one {
+    padding: 20px;
+}
+
+.section-16--one p {
+    padding: 5px;
+}
+
+.sctiont-16--two {
+    padding: 20px;
+}
+
+.sctiont-16--two p {
+    padding: 5px;
+}
+
+.section-16--three {
+    padding: 20px;
+}
+
+.section-16--three p {
+    padding: 5px;
+}
+
+.sction-16-five {
+    padding: 20px;
+    float: right;
+}
+
+.sction-16-five p {
+    padding: 5px;
+}
+
+.section-16--two {
+    margin: 10px auto;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+}
+
+.section-16--two--part1 img {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+
+}
+
+.box {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 5px;
+}
+
+.box p {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.section-16--two--part3 {
+    display: flex;
+    flex-direction: row;
+}
+
+.section-16--two--part3 button {
+    width: 100px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 10px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.final {
+    margin: 10px auto;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    font-size: 10px;
+}
+
+.contact {
+    margin: 10px auto;
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 20px;
+    gap: 10px;
+}
+
+.contact i:hover {
+    cursor: pointer;
+    opacity: 0.8;
+
+}
+
+@media screen and (max-width:1200px) {
+    .section-6 {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width:1000px) {
+    .navbar {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .sidebar {
+        display: flex;
+    }
+
+    .section_1--one,
+    .section_1--one--part1,
+    .section_1--one--part2,
+    .section_1--one--part3,
+    .section_1--one--part4 {
+        display: none;
+    }
+
+    .navbar .section_1--two .button1 {
+        display: none;
+    }
+
+    .navbar .logo .logo_tripadvisor h1 {
+        font-size: 25px;
+    }
+
+    .section-5 {
+        width: 100%;
+    }
+
+    .section-3 {
+        position: none;
+    }
+}
+
+@media screen and (max-width:750px) {
+    .navbar .logo .profile {
+        display: block;
+    }
+
+    .navbar .section_1--two .button2,
+    .section_1--two,
+    .section_1--two .button1,
+    .section_1--two {
+        display: none;
+        width: 0;
+    }
+
+    .navbar {
+        width: 100%;
+    }
+
+    .navbar .logo {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .navbar .section_1--two {
+        display: none;
+    }
+
+    .navbar .logo .logo_tripadvisor h1 {
+        font-size: 20px;
+    }
+
+    .Section-2 {
+        display: none;
+    }
+
+    .section-3 {
+        display: none;
+    }
+
+    .section-4 {
+        flex-direction: column;
+        width: 95%;
+        margin: 20px 10px;
+    }
+
+    .section-4 button {
+        width: 100%;
+    }
+
+    .section-5 {
+        flex-wrap: wrap;
+    }
+
+    .section-5 img {
+        width: 100%;
+    }
+
+    .section-8--image {
+        width: 100%;
+    }
+
+    .section-7 {
+        width: 100%;
+    }
+}

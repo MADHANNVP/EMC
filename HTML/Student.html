@@ -7,30 +7,131 @@
     <title>Student</title>
     <link rel="stylesheet" href="../css/student.css">
     <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
         body {
             width: 100vw;
             background-color: blueviolet;
         }
 
-        .container {}
+        .container {
+            margin: 30px 40px;
+            background-color: rgb(238, 233, 245);
+            border-radius: 10px;
+        }
+
+        .title {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        .title button {
+            padding: 10px 20px;
+            background-color: rgb(63, 211, 26);
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .desc {
+            padding: 20px;
+            margin: 20px;
+            display: flex;
+            gap: 10px;
+            flex-direction: column;
+        }
+
+        .desc h1 {
+            padding: 10px 10px 20px 0;
+        }
+
+        .desc input {
+            padding: 15px;
+            font-size: 16px;
+            border: none;
+            outline: none;
+        }
+
+        .desc select {
+            border: none;
+            padding: 15px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .desc button {
+            border: none;
+            padding: 15px;
+            font-size: 16px;
+            outline: none;
+            background-color: white;
+            font-weight: 600;
+        }
+
+        .student-list {
+            margin: 20px;
+            padding: 20px;
+        }
+
+        .student-list h1 {
+            margin: 0px 0px 20px 0px;
+        }
+
+        .student-list table thead tr th {
+            padding: 10px;
+            background: linear-gradient(red, blue);
+            color: white;
+        }
+
+        .student-list table tbody tr td {
+            padding: 20px 10px 20px 10px;
+        }
+
+        .student-list table tbody tr td button {
+            padding: 10px;
+            background: linear-gradient(to right, orange, red);
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+        .explore {
+            padding: 10px 20px;
+            background: linear-gradient(green, rgb(54, 216, 54));
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <h1>Student To-Do List</h1><button>Dark Mode</button>
-        <h1>Add Student Details</h1>
-        <input type="name" class="namefeld" placeholder="Name">
-        <input type="age" class="agefeld" placeholder="Age">
-        <select>
-            <option>Select Gender</option>
-            <option>Male</option>
-            <option>Female</option>
-            <option>Other</option>
-        </select>
-        <input type="text" class="coursefeld" placeholder="Course">
-        <input type="email" class="emailfeld" placeholder="Email">
-        <button>Add Student</button>
+        <div class="title">
+            <h1>Student To-Do List</h1><button>Dark Mode</button>
+        </div>
+        <div class="desc">
+            <h1>Add Student Details</h1>
+            <input type="name" class="namefeld" placeholder="Name">
+            <input type="age" class="agefeld" placeholder="Age">
+            <select>
+                <option>Select Gender</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+            </select>
+            <input type="text" class="coursefeld" placeholder="Course">
+            <input type="email" class="emailfeld" placeholder="Email">
+            <button>Add Student</button>
+        </div>
         <div class="student-list">
             <h1>Student List</h1>
             <table>
@@ -55,7 +156,7 @@
                     </tr>
                 </tbody>
             </table>
-            <button>Export as CSV</button>
+            <button class="explore">Export as CSV</button>
         </div>
     </div>
 </body>
