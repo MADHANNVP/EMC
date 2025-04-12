@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        .header{
+            display:grid;
+            grid-template-rows: 2fr;
+            background-color: skyblue;
+            height: 100px;
+            padding: 0px 10px;
+            align-items: center;
+            color:white;
+            margin:3px;
+        }
+        .main{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            background-color: pink;
+            color:white;
+        }
+        .content{
+            width:600px;
+
+        }
+        .onetwo{
+            display:grid;
+            grid-template-columns:2fr 1fr;
+        }
+        .threefour{
+            display: grid;
+            grid-template-columns:1fr 1fr;
+        }
+        .one{
+            background-color: red;
+            height: 100px;
+            margin:3px;
+        }
+        .two{
+            background-color:violet;
+            height: 100px;
+            margin:3px;
+        }
+        .three,.four{
+            height: 100px;
+            background-color: orangered;
+            margin:3px;
+        }
+        .footer{
+            height:100px;
+            margin:3px;
+            background-color: blue;
+            color:white;
+            display: grid;
+            align-items: center;
+            padding: 0px 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+    <div class="header">HEADER</div>
+    <div class="main">
+        <div class="content">
+        <div class="onetwo">
+            <div class="one">Mint content</div>
+            <div class="two">Side bar</div>
+        </div>
+        <div class="threefour">
+        <div class="three">Twin </div>
+        <div class="four">Twin</div>
+    </div></div>
+    </div>
+    <div class="footer">fOOTER</div>
+</div>
+</body>
+</html>
