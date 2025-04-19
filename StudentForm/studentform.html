@@ -16,70 +16,7 @@
     <link rel="stylesheet" href="studentform.css">
 
     <style>
-        * {
-            padding: 0;
-            margin: 0;
-        }
-
-        body {
-            width: 100vw;
-            height: 100vh;
-        }
-
-        .navbar {
-            background-color: #3e4444;
-            color: white;
-            display: flex;
-            height: 50px;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .navbar--heading {
-            padding: 10px;
-        }
-
-        .navbar--btn {
-            width: 30px;
-            border: none;
-            outline: none;
-            height: 30px;
-            display: flex;
-            justify-content: center;
-            gap: 3px;
-            flex-direction: column;
-            align-items: center;
-            background-color: transparent;
-            cursor: pointer;
-            margin: 15px;
-            position: relative;
-        }
-
-        .navbar--btn span {
-            height: 3px;
-            width: 100%;
-            border-radius: 25px;
-            background-color: white;
-        }
-
-        .section--one {
-            padding: 4px;
-            margin: 10px;
-        }
-
-        .navbar--scroll {
-            position: absolute;
-            right: 0;
-            top: 50px;
-            background-color: #3e4444;
-            color: white;
-            padding: 10px;
-            display: none;
-        }
-        .navbar--scroll a{
-            color: white;
-            text-decoration: none;
-        }
+       
         .show {
             display: inline-block;
         }
@@ -87,17 +24,64 @@
             padding:4px;
             margin:10px;
         }
-        .section--one p{
-            padding:10px;
-        }
-        .section--one input{
-            padding:5px;
-            margin-left: 10px;
-            width:90%;
-            border:1px solid black;
-        outline: none;
-        }
-    </style>
+            .section--one {
+                padding: 4px;
+                margin: 10px;
+            }
+            .section--one p{
+                display: flex;
+                flex-shrink: 0;
+                padding:10px;
+            }
+            .section--one input{
+                padding:5px;
+                margin-left: 10px;
+                width:90%;
+                border:1px solid black;
+                outline: none;
+            }
+            .section--one--lastname {
+                padding: 4px;
+                margin: 10px;
+            }
+            .section--one--lastname p{
+                display: flex;
+                flex-shrink: 0;
+                padding:10px;
+            }
+            .section--one--lastname input{
+                padding:5px;
+                margin-left: 10px;
+                width:90%;
+                border:1px solid black;
+                outline: none;
+            }
+            .section--one--date {
+                padding: 4px;
+                margin: 10px;
+            }
+            .section--one--date p{
+                display: flex;
+                flex-shrink: 0;
+                padding:10px;
+            }
+            .section--one--date input{
+                padding:5px;
+                margin-left: 10px;
+                width:90%;
+                border:1px solid black;
+                outline: none;
+            }
+            @media (min-width:767px){
+                .container{
+                    width:60%;
+                }
+                .main{
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+            </style>
 </head>
 
 <body>
@@ -112,13 +96,22 @@
             </div>
         </button>
     </nav>
-    <main>
+    <main class="main">
         <div class="container">
             <h2 class="section--heading">Student Information</h2>
             <div class="section--one">
                 <p>FIRST NAME :</p>
-                <input type="text">
+                <input type="text" placeholder="First Name" class="first--name">
             </div>
+            <div class="section--one--lastname">
+                <p>LAST NAME :</p>
+                <input type="text" placeholder="Last Name" class="last--name">
+            </div>
+            <div class="section--one--date">
+                <p>Date :</p>
+                <input type="text" placeholder="mm/dd/yyyy" class="date">
+            </div>
+        </div>
         </div>
     </main>
     <script src="studentform.js">
