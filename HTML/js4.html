@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <style>
+            .div{
+                width:200px;
+                background-color: black;
+                color:white;
+                padding:10px;
+                display: none;
+            }
+            .show{
+                display:block;
+            }
+            .close{
+                display:none;
+            }
+        </style>
+    </head>
+    <body>
+        <button id="btn">click</button>
+        <div class="div">
+            <p id="cl" style="cursor: pointer;">X</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto unde, similique ratione quae minima tempora soluta voluptas dolores saepe accusantium, quia suscipit veritatis quos assumenda cum, dolorum est ducimus quo! Ipsa officiis obcaecati odit quisquam cum necessitatibus odio excepturi fugiat. Optio, facilis suscipit consequatur id aspernatur dignissimos itaque quis ab.</p>
+        </div>
+        <button class="btn">Add</button>
+        <div class="box"></div>
+        <script>
+            var div=document.querySelector(".div")
+            var btn=document.querySelector("#btn")
+            var par=document.querySelector("#cl")
+                btn.addEventListener("click",function(){
+                    div.classList.add("show")
+                })
+            par.addEventListener("click",function(){
+                div.classList.remove("show")
+            })
+            var btnadd=document.querySelector(".btn")
+            var box=document.querySelector(".box")
+            btnadd.addEventListener("click",function(){
+                var nw=document.createElement("h1")
+                var w=document.createElement("button")
+                nw.textContent="hello"
+                w.innerHTML="Delete"
+                box.append(nw)
+                box.append(w)
+            }) 
+            
+            </script>
+    </body>
+</html>

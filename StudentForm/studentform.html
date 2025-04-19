@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <link rel="icon" href="image/icon.png">
+
+    <link rel="stylesheet" href="studentform.css">
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .navbar {
+            background-color: #3e4444;
+            color: white;
+            display: flex;
+            height: 50px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar--heading {
+            padding: 10px;
+        }
+
+        .navbar--btn {
+            width: 30px;
+            border: none;
+            outline: none;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 3px;
+            flex-direction: column;
+            align-items: center;
+            background-color: transparent;
+            cursor: pointer;
+            margin: 15px;
+        }
+
+        .navbar--btn span {
+            height: 3px;
+            width: 100%;
+            border-radius: 25px;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <h1 class="navbar--heading">STUDENT FORM</h1>
+        <button class="navbar--btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+    <main>
+        <div class="container">
+            <h2>Student Information</h2>
+            <form>
+                <table>
+                    <tr>
+                        <td><label>FIRST NAME </label></td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td><label>LAST NAME</label></td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>DATE </td>
+                        <td><input type="text"></td>
+                    </tr>
+                </table>
+            </form>
+            <h2>Address</h2>
+            <form>
+                <table>
+                  
+                </table>
+            </form>
+        </div>
+    </main>
+
+</body>
+
+</html>

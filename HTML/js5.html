@@ -1,0 +1,21 @@
+<body>
+    <input type="text" class="input">
+    <button class="btn"> add</button>
+
+    <ul class="container">
+        <li>Hello <button onclick="delee(event)">Delete</button></li>
+    </ul>
+    <script>
+        var input=document.querySelector(".input")
+        var btn=document.querySelector(".btn")
+        var can=document.querySelector(".container")
+        btn.addEventListener("click",function(){
+            var li=document.createElement("li")
+            li.innerHTML=input.value+"<button onclick="+"delee(event)"+"> Delete"+"</button>"
+            can.append(li)
+        })
+        function delee(event){
+          event.target.parentElement.remove()
+        }
+    </script>
+</body>
