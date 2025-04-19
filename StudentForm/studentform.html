@@ -70,6 +70,89 @@
                 outline: none;
                 border:1px solid black;
             }
+            .save{
+                padding:5px;
+                margin:10px;
+                width:100px;
+                background-color: aqua;
+                /* border:none; */
+                outline: none;
+                cursor:pointer;
+                animation-name: zome;
+                animation-duration: 3s;
+                animation-timing-function:ease-in-out;
+                animation-iteration-count: infinite;
+            }
+            .save--div{
+                display: flex;
+                justify-content: center;
+                
+            }
+           @keyframes zome{
+            0%{
+                transform:scale(0.8);
+            }
+            50%{
+                transform: scale(1);
+            }
+            100%{
+                transform: scale(0.8);
+            }
+           }
+           .hidden{
+            display:none;
+           }
+           .navbar--2 {
+    background-color: #3e4444;
+    color: white;
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar--2--heading {
+    padding: 10px;
+}
+
+.navbar--2--btn {
+    width: 30px;
+    border: none;
+    outline: none;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 15px;
+    position: relative;
+}
+
+.navbar--2--btn span {
+    height: 3px;
+    width: 100%;
+    border-radius: 25px;
+    background-color: white;
+}
+.navbar--2--scroll{
+    position: absolute;
+    right: 0;
+    top: 50px;
+    background-color: #3e4444;
+    color: white;
+    padding: 10px;
+    display: none;
+}
+.view{
+    display:block;
+}
+.navbar--2--scroll a{
+    color: white;
+    text-decoration: none;
+}
             @media (min-width:767px){
                 .container{
                     width:60%;
@@ -90,6 +173,7 @@
 </head>
 
 <body>
+    <div class="student--information hidden">
     <nav class="navbar">
         <h1 class="navbar--heading">STUDENT FORM</h1>
         <button class="navbar--btn">
@@ -101,6 +185,7 @@
             </div>
         </button>
     </nav>
+   
     <main class="main">
         <div class="container">
             <h2 class="section--heading">Student Information</h2>
@@ -140,7 +225,7 @@
                         <option >Sql</option>
                     </select>
                 </div>
-            </div>
+            </div>s
             <div class="section--one--address">
                 <p>Address :</p>
                 <input type="text" placeholder="Street Address" class="street--address">
@@ -153,9 +238,32 @@
                     <input type="text" placeholder="ZIP Code">
                 </div>
             </div>
-        </div>
+            <div class="save--div"><button class="save">Save</button></div>
         </div>
     </main>
+</div>
+<div class="student--details">
+    <nav class="navbar--2">
+        <h1 class="navbar--2--heading">STUDENT DETAILS</h1>
+        <button class="navbar--2--btn">
+            <span></span>
+            <span></span>
+            <span></span>
+            <div class="navbar--2--scroll" >
+                <a href="#"> STUDENT INFORMATION</a>
+            </div>
+        </button>
+    </nav>
+    <div class="details">
+        <table>
+            <tr>
+                <th>
+                    
+                </th>
+            </tr>
+        </table>
+    </div>
+</div>
     <script src="studentform.js">
     
     </script>

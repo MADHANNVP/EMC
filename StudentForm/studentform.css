@@ -63,7 +63,7 @@ body {
     text-decoration: none;
 }
 .show {
-    display: inline-block;
+    display:block;
 }
 .section--heading{
     padding:4px;
