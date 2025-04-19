@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table class="table">
+        <tr>
+            <td>madhan</td>
+            <td>madhan</td>
+        </tr>
+    </table>
+    <script>
+        var table=document.querySelector(".table")
+        var tr1=document.createElement("tr")
+        var td1=document.createElement("td")
+        var td2=document.createElement("td")
+        td1.textContent="madhan"
+        td2.textContent="hello"
+        tr1.appendChild(td1)
+        tr1.appendChild(td2)
+        table.append(tr1)
+    </script>
+</body>
+</html>
