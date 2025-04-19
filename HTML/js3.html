@@ -1,11 +1,19 @@
 <body>
     <input type="text" onkeyup="up()" id="one">
     <h1 id="two"></h1>
+    <select >
+        <option >java</option>
+        <option > python</option>
+        <option >javascript</option>
+        <option >R</option>
+    </select>
     <script>
        var inpt=document.getElementById("one")
        var h1=document.getElementById("two")
        function up(){
         h1.textContent=inpt.value
        }
+       var sec=document.querySelector(".sec")
+       console.log(sec.textContent)
     </script>
 </body>

@@ -17,45 +17,7 @@
 
     <style>
        
-        .show {
-            display: inline-block;
-        }
-        .section--heading{
-            padding:4px;
-            margin:10px;
-        }
-            .section--one {
-                padding: 4px;
-                margin: 10px;
-            }
-            .section--one p{
-                display: flex;
-                flex-shrink: 0;
-                padding:10px;
-            }
-            .section--one input{
-                padding:5px;
-                margin-left: 10px;
-                width:90%;
-                border:1px solid black;
-                outline: none;
-            }
-            .section--one--lastname {
-                padding: 4px;
-                margin: 10px;
-            }
-            .section--one--lastname p{
-                display: flex;
-                flex-shrink: 0;
-                padding:10px;
-            }
-            .section--one--lastname input{
-                padding:5px;
-                margin-left: 10px;
-                width:90%;
-                border:1px solid black;
-                outline: none;
-            }
+       
             .section--one--date {
                 padding: 4px;
                 margin: 10px;
@@ -71,6 +33,73 @@
                 width:90%;
                 border:1px solid black;
                 outline: none;
+            }
+            .section--one--email{
+                padding: 4px;
+                margin: 10px;
+            }
+            .section--one--email{
+                padding: 4px;
+                margin: 10px;
+            }
+            .section--one--email p{
+                display: flex;
+                flex-shrink: 0;
+                padding:10px;
+            }
+            .section--one--email input{
+                padding:5px;
+                margin-left: 10px;
+                width:90%;
+                border:1px solid black;
+                outline: none;
+            }
+            .section--one--address{
+                padding: 4px;
+                margin: 10px;
+                display: flex;
+                flex-direction: column;
+                gap:8px;
+            }
+            .section--one--address p{
+                display: flex;
+                flex-shrink: 0;
+                padding:10px;
+            } 
+            .street--address{
+                padding:5px;
+                margin-left: 10px;
+                width:90%;
+                border:1px solid black;
+                outline: none;
+            }
+            .city-state{
+                display:flex;
+                margin-left:10px;
+                width:92%;
+                gap:8px;
+            }
+            .city-state input{
+                display: flex;
+                flex-grow: 1;
+                padding:5px;
+                border:1px solid black;
+                outline:none;
+                
+            }
+            .section--one--Gender{
+                padding: 4px;
+                margin: 10px;
+            }
+            .section--one--Gender p{
+                display: flex;
+                flex-shrink: 0;
+                padding:10px;
+            } 
+            .gender{
+                padding:8px;
+                display:flex;
+                gap:5px;
             }
             @media (min-width:767px){
                 .container{
@@ -108,8 +137,39 @@
                 <input type="text" placeholder="Last Name" class="last--name">
             </div>
             <div class="section--one--date">
-                <p>Date :</p>
-                <input type="text" placeholder="mm/dd/yyyy" class="date">
+                <p>Date Of Birth :</p>
+                <input type="number" placeholder="mm-dd-yyyy" class="date">
+            </div>
+            <div class="section--one--date">
+                <p>Age :</p>
+                <input type="number" placeholder="Age" class="age">
+            </div>
+            <div class="section--one--email">
+                <p>Email :</p>
+                <input type="email" placeholder="E-mail" class="email">
+            </div>
+            <div class="section--one--Gender">
+                <p>Gender :</p>
+                <div class="gender">
+                    <input type="radio"class="genter" name="gender"><label>Male</label>
+                    <input type="radio"class="genter" name="gender"><label>FeMale</label>
+                </div>
+                <div class="section--one--email">
+                    <p>Course:</p>
+                    <input type="email" placeholder="E-mail" class="email">
+                </div>
+            </div>
+            <div class="section--one--address">
+                <p>Address :</p>
+                <input type="text" placeholder="Street Address" class="street--address">
+                <div class="city-state">
+                    <input type="text" placeholder="City">
+                    <input type="text" placeholder="State/Province">
+                </div>
+                <div class="city-state">
+                    <input type="text" placeholder="Country">
+                    <input type="text" placeholder="ZIP Code">
+                </div>
             </div>
         </div>
         </div>

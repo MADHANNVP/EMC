@@ -62,3 +62,42 @@ body {
     color: white;
     text-decoration: none;
 }
+.show {
+    display: inline-block;
+}
+.section--heading{
+    padding:4px;
+    margin:10px;
+}
+    .section--one {
+        padding: 4px;
+        margin: 10px;
+    }
+    .section--one p{
+        display: flex;
+        flex-shrink: 0;
+        padding:10px;
+    }
+    .section--one input{
+        padding:5px;
+        margin-left: 10px;
+        width:90%;
+        border:1px solid black;
+        outline: none;
+    }
+    .section--one--lastname {
+        padding: 4px;
+        margin: 10px;
+    }
+    .section--one--lastname p{
+        display: flex;
+        flex-shrink: 0;
+        padding:10px;
+    }
+    .section--one--lastname input{
+        padding:5px;
+        margin-left: 10px;
+        width:90%;
+        border:1px solid black;
+        outline: none;
+    }
