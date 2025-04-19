@@ -16,256 +16,325 @@
     <link rel="stylesheet" href="studentform.css">
 
     <style>
-       
-       
-            .section--one--address p{
-                display: flex;
-                flex-shrink: 0;
-                padding:10px;
-            } 
-            .street--address{
-                padding:5px;
-                margin-left: 10px;
-                width:90%;
-                border:1px solid black;
-                outline: none;
-            }
-         
-            .section--one--Gender{
-                padding: 4px;
-                margin: 10px;
-            }
-            .section--one--Gender p{
-                display: flex;
-                flex-shrink: 0;
-                padding:10px;
-            } 
-            .gender{
-                padding:8px;
-                display:flex;
-                gap:5px;
-            }
-            .city-state{
-                display:flex;
-                flex-direction: column;
-                width:92%;
-                margin-left: 10px;
-                gap:8px;
-            }
-            .city-state input{
-                display: flex;
-                flex-grow: 1;
-                padding:5px;
-                border:1px solid black;
-                outline:none;
-                
-            }
-            .section--one--course{
-                display: flex;
-                align-items: center;
-            }
-            .sec{
-                padding:4px;
-                width:300px;
-                outline: none;
-                border:1px solid black;
-            }
-            .save{
-                padding:5px;
-                margin:10px;
-                width:100px;
-                background-color: aqua;
-                /* border:none; */
-                outline: none;
-                cursor:pointer;
-                animation-name: zome;
-                animation-duration: 3s;
-                animation-timing-function:ease-in-out;
-                animation-iteration-count: infinite;
-            }
-            .save--div{
-                display: flex;
-                justify-content: center;
-                
-            }
-           @keyframes zome{
-            0%{
-                transform:scale(0.8);
-            }
-            50%{
-                transform: scale(1);
-            }
-            100%{
+        .section--one--address p {
+            display: flex;
+            flex-shrink: 0;
+            padding: 10px;
+        }
+
+        .street--address {
+            padding: 5px;
+            margin-left: 10px;
+            width: 90%;
+            border: 1px solid black;
+            outline: none;
+        }
+
+        .section--one--Gender {
+            padding: 4px;
+            margin: 10px;
+        }
+
+        .section--one--Gender p {
+            display: flex;
+            flex-shrink: 0;
+            padding: 10px;
+        }
+
+        .gender {
+            padding: 8px;
+            display: flex;
+            gap: 5px;
+        }
+
+        .city-state {
+            display: flex;
+            flex-direction: column;
+            width: 92%;
+            margin-left: 10px;
+            gap: 8px;
+        }
+
+        .city-state input {
+            display: flex;
+            flex-grow: 1;
+            padding: 5px;
+            border: 1px solid black;
+            outline: none;
+
+        }
+
+        .section--one--course {
+            display: flex;
+            align-items: center;
+        }
+
+        .sec {
+            padding: 4px;
+            width: 300px;
+            outline: none;
+            border: 1px solid black;
+        }
+
+        .save {
+            padding: 5px;
+            margin: 10px;
+            width: 100px;
+            background-color: aqua;
+            /* border:none; */
+            outline: none;
+            cursor: pointer;
+            animation-name: zome;
+            animation-duration: 3s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+        }
+
+        .save--div {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        @keyframes zome {
+            0% {
                 transform: scale(0.8);
             }
-           }
-           .hidden{
-            display:none;
-           }
-           .navbar--2 {
-    background-color: #3e4444;
-    color: white;
-    display: flex;
-    height: 50px;
-    justify-content: space-between;
-    align-items: center;
-}
 
-.navbar--2--heading {
-    padding: 10px;
-}
+            50% {
+                transform: scale(1);
+            }
 
-.navbar--2--btn {
-    width: 30px;
-    border: none;
-    outline: none;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    gap: 3px;
-    flex-direction: column;
-    align-items: center;
-    background-color: transparent;
-    cursor: pointer;
-    margin: 15px;
-    position: relative;
-}
+            100% {
+                transform: scale(0.8);
+            }
+        }
 
-.navbar--2--btn span {
-    height: 3px;
-    width: 100%;
-    border-radius: 25px;
-    background-color: white;
-}
-.navbar--2--scroll{
-    position: absolute;
-    right: 0;
-    top: 50px;
-    background-color: #3e4444;
-    color: white;
-    padding: 10px;
-    display: none;
-}
-.view{
-    display:block;
-}
-.navbar--2--scroll a{
-    color: white;
-    text-decoration: none;
-}
-            @media (min-width:767px){
-                .container{
-                    width:60%;
-                }
-                .main{
-                    display: flex;
-                    justify-content: center;
-                }
-                .city-state{
-                display:flex;
+        .hidden {
+            display: none;
+        }
+
+        .navbar--2 {
+            background-color: #3e4444;
+            color: white;
+            display: flex;
+            height: 50px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar--2--heading {
+            padding: 10px;
+        }
+
+        .navbar--2--btn {
+            width: 30px;
+            border: none;
+            outline: none;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 3px;
+            flex-direction: column;
+            align-items: center;
+            background-color: transparent;
+            cursor: pointer;
+            margin: 15px;
+            position: relative;
+        }
+
+        .navbar--2--btn span {
+            height: 3px;
+            width: 100%;
+            border-radius: 25px;
+            background-color: white;
+        }
+
+        .navbar--2--scroll {
+            position: absolute;
+            right: 0;
+            top: 50px;
+            background-color: #3e4444;
+            color: white;
+            padding: 10px;
+            display: none;
+        }
+
+        .view {
+            display: block;
+        }
+
+        .navbar--2--scroll a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .student--details {
+            width: 100vw;
+            height: 100vh;
+            background-color: #c68aff;
+            /* color:white; */
+        }
+
+        table {
+            border: 1px solid red;
+            border-collapse: collapse;
+        }
+
+        table tr th {
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+        table tr td {
+            padding: 10px;
+            border: 1px solid black;
+            color: aqua;
+        }
+
+        @media (min-width:767px) {
+            .container {
+                width: 60%;
+            }
+
+            .main {
+                display: flex;
+                justify-content: center;
+            }
+
+            .city-state {
+                display: flex;
                 flex-direction: row;
-                margin-left:10px;
-                width:92%;
-                gap:8px;
+                margin-left: 10px;
+                width: 92%;
+                gap: 8px;
             }
+
+            table {
+
+                width: fit-content;
             }
-            </style>
+        }
+    </style>
 </head>
 
 <body>
     <div class="student--information hidden">
-    <nav class="navbar">
-        <h1 class="navbar--heading">STUDENT FORM</h1>
-        <button class="navbar--btn">
-            <span></span>
-            <span></span>
-            <span></span>
-            <div class="navbar--scroll ">
-                <a href="#"> STUDENT DETAILS</a>
-            </div>
-        </button>
-    </nav>
-   
-    <main class="main">
-        <div class="container">
-            <h2 class="section--heading">Student Information</h2>
-            <div class="section--one">
-                <p>FIRST NAME :</p>
-                <input type="text" placeholder="First Name" class="first--name">
-            </div>
-            <div class="section--one--lastname">
-                <p>LAST NAME :</p>
-                <input type="text" placeholder="Last Name" class="last--name">
-            </div>
-            <div class="section--one--date">
-                <p>Date Of Birth :</p>
-                <input type="number" placeholder="mm-dd-yyyy" class="date">
-            </div>
-            <div class="section--one--date">
-                <p>Age :</p>
-                <input type="number" placeholder="Age" class="age">
-            </div>
-            <div class="section--one--email">
-                <p>Email :</p>
-                <input type="email" placeholder="E-mail" class="email">
-            </div>
-            <div class="section--one--Gender">
-                <p>Gender :</p>
-                <div class="gender">
-                    <input type="radio"class="genter" name="gender"><label>Male</label>
-                    <input type="radio"class="genter" name="gender"><label>FeMale</label>
+        <nav class="navbar">
+            <h1 class="navbar--heading">STUDENT FORM</h1>
+            <button class="navbar--btn">
+                <span></span>
+                <span></span>
+                <span></span>
+                <div class="navbar--scroll ">
+                    <a href="#"> STUDENT DETAILS</a>
                 </div>
-                <div class="section--one--course">
-                    <p>Course:</p>
-                    <select class="sec" onchange="onchan()">
-                        <option >Java</option>
-                        <option > python</option>
-                        <option >javascript</option>
-                        <option >R</option>
-                        <option >Sql</option>
-                    </select>
+            </button>
+        </nav>
+
+        <main class="main">
+            <div class="container">
+                <h2 class="section--heading">Student Information</h2>
+                <div class="section--one">
+                    <p>FIRST NAME :</p>
+                    <input type="text" placeholder="First Name" class="first--name">
                 </div>
-            </div>s
-            <div class="section--one--address">
-                <p>Address :</p>
-                <input type="text" placeholder="Street Address" class="street--address">
-                <div class="city-state">
-                    <input type="text" placeholder="City">
-                    <input type="text" placeholder="State/Province">
+                <div class="section--one--lastname">
+                    <p>LAST NAME :</p>
+                    <input type="text" placeholder="Last Name" class="last--name">
                 </div>
-                <div class="city-state">
-                    <input type="text" placeholder="Country">
-                    <input type="text" placeholder="ZIP Code">
+                <div class="section--one--date">
+                    <p>Date Of Birth :</p>
+                    <input type="number" placeholder="mm-dd-yyyy" class="date">
                 </div>
+                <div class="section--one--date">
+                    <p>Age :</p>
+                    <input type="number" placeholder="Age" class="age">
+                </div>
+                <div class="section--one--email">
+                    <p>Email :</p>
+                    <input type="email" placeholder="E-mail" class="email">
+                </div>
+                <div class="section--one--Gender">
+                    <p>Gender :</p>
+                    <div class="gender">
+                        <input type="radio" class="genter" name="gender"><label>Male</label>
+                        <input type="radio" class="genter" name="gender"><label>FeMale</label>
+                    </div>
+                    <div class="section--one--course">
+                        <p>Course:</p>
+                        <select class="sec" onchange="onchan()">
+                            <option>Java</option>
+                            <option> python</option>
+                            <option>javascript</option>
+                            <option>R</option>
+                            <option>Sql</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="section--one--address">
+                    <p>Address :</p>
+                    <input type="text" placeholder="Street Address" class="street--address">
+                    <div class="city-state">
+                        <input type="text" placeholder="City">
+                        <input type="text" placeholder="State/Province">
+                    </div>
+                    <div class="city-state">
+                        <input type="text" placeholder="Country">
+                        <input type="text" placeholder="ZIP Code">
+                    </div>
+                </div>
+                <div class="save--div"><button class="save">Save</button></div>
             </div>
-            <div class="save--div"><button class="save">Save</button></div>
-        </div>
-    </main>
-</div>
-<div class="student--details">
-    <nav class="navbar--2">
-        <h1 class="navbar--2--heading">STUDENT DETAILS</h1>
-        <button class="navbar--2--btn">
-            <span></span>
-            <span></span>
-            <span></span>
-            <div class="navbar--2--scroll" >
-                <a href="#"> STUDENT INFORMATION</a>
-            </div>
-        </button>
-    </nav>
-    <div class="details">
-        <table>
-            <tr>
-                <th>
-                    
-                </th>
-            </tr>
-        </table>
+        </main>
     </div>
-</div>
+    <div class="student--details">
+        <nav class="navbar--2">
+            <h1 class="navbar--2--heading">STUDENT DETAILS</h1>
+            <button class="navbar--2--btn">
+                <span></span>
+                <span></span>
+                <span></span>
+                <div class="navbar--2--scroll">
+                    <a href="#"> STUDENT INFORMATION</a>
+                </div>
+            </button>
+        </nav>
+        <div class="details " style="width:90%;">
+            <table style="display:flex; flex-wrap:wrap;margin:10px;overflow-x: auto;">
+                <tr style=>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Date Of Birth</th>
+                    <th>Age</th>
+                    <th>Email</th>
+                    <th>Gender</th>
+                    <th>Course</th>
+                    <th>ACTION</th>
+                    <th>City</th>
+                    <th>Country</th>
+                    <th>StreetAddress</th>
+                    <th>Zip Code</th>
+                </tr>
+                <tr>
+                    <td>madhan</td>
+                    <td>madhan</td>
+                    <td>madhan</td>
+                    <td>madh</td>
+                    <td>madhan</td>
+                    <td>madhan</td>
+                    <td>madhan</td>
+                    <td>madh</td>
+                    <td>madhan</td>
+                    <td>madhan</td>
+                    <td>madhan</td>
+                    <td>madh</td>
+                </tr>
+            </table>
+        </div>
+    </div>
     <script src="studentform.js">
-    
+
     </script>
 </body>
 

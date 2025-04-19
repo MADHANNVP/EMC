@@ -20,7 +20,7 @@ std.addEventListener("click",function(){
 })
 var navscr1=document.querySelector(".navbar--2--scroll")
 var btn2=document.querySelector(".navbar--2--btn")
-// var body2=document.querySelector(".")
+var navbartwo=document.querySelector(".student--details")
 var body3=document.querySelector(".navbar--2--heading")
 btn2.addEventListener("click",function(){
     navscr1.classList.add("view")
@@ -30,4 +30,7 @@ body3.addEventListener("click", function () {
 })
 navbar1.addEventListener("click",function(){
     navbar2.classList.remove("hidden")
+})
+navbar1.addEventListener("click",function(){
+    navbartwo.classList.add("hidden")
 })
