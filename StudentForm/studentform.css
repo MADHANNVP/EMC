@@ -101,3 +101,47 @@ body {
         border:1px solid black;
         outline: none;
     }
+    
+    .section--one--date {
+        padding: 4px;
+        margin: 10px;
+    }
+    .section--one--date p{
+        display: flex;
+        flex-shrink: 0;
+        padding:10px;
+    }
+    .section--one--date input{
+        padding:5px;
+        margin-left: 10px;
+        width:90%;
+        border:1px solid black;
+        outline: none;
+    }
+    .section--one--email{
+        padding: 4px;
+        margin: 10px;
+    }
+    .section--one--email{
+        padding: 4px;
+        margin: 10px;
+    }
+    .section--one--email p{
+        display: flex;
+        flex-shrink: 0;
+        padding:10px;
+    }
+    .section--one--email input{
+        padding:5px;
+        margin-left: 10px;
+        width:90%;
+        border:1px solid black;
+        outline: none;
+    }
+    .section--one--address{
+        padding: 4px;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        gap:8px;
+    }

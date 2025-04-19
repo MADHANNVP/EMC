@@ -18,49 +18,6 @@
     <style>
        
        
-            .section--one--date {
-                padding: 4px;
-                margin: 10px;
-            }
-            .section--one--date p{
-                display: flex;
-                flex-shrink: 0;
-                padding:10px;
-            }
-            .section--one--date input{
-                padding:5px;
-                margin-left: 10px;
-                width:90%;
-                border:1px solid black;
-                outline: none;
-            }
-            .section--one--email{
-                padding: 4px;
-                margin: 10px;
-            }
-            .section--one--email{
-                padding: 4px;
-                margin: 10px;
-            }
-            .section--one--email p{
-                display: flex;
-                flex-shrink: 0;
-                padding:10px;
-            }
-            .section--one--email input{
-                padding:5px;
-                margin-left: 10px;
-                width:90%;
-                border:1px solid black;
-                outline: none;
-            }
-            .section--one--address{
-                padding: 4px;
-                margin: 10px;
-                display: flex;
-                flex-direction: column;
-                gap:8px;
-            }
             .section--one--address p{
                 display: flex;
                 flex-shrink: 0;
@@ -73,20 +30,7 @@
                 border:1px solid black;
                 outline: none;
             }
-            .city-state{
-                display:flex;
-                margin-left:10px;
-                width:92%;
-                gap:8px;
-            }
-            .city-state input{
-                display: flex;
-                flex-grow: 1;
-                padding:5px;
-                border:1px solid black;
-                outline:none;
-                
-            }
+         
             .section--one--Gender{
                 padding: 4px;
                 margin: 10px;
@@ -101,6 +45,31 @@
                 display:flex;
                 gap:5px;
             }
+            .city-state{
+                display:flex;
+                flex-direction: column;
+                width:92%;
+                margin-left: 10px;
+                gap:8px;
+            }
+            .city-state input{
+                display: flex;
+                flex-grow: 1;
+                padding:5px;
+                border:1px solid black;
+                outline:none;
+                
+            }
+            .section--one--course{
+                display: flex;
+                align-items: center;
+            }
+            .sec{
+                padding:4px;
+                width:300px;
+                outline: none;
+                border:1px solid black;
+            }
             @media (min-width:767px){
                 .container{
                     width:60%;
@@ -109,6 +78,13 @@
                     display: flex;
                     justify-content: center;
                 }
+                .city-state{
+                display:flex;
+                flex-direction: row;
+                margin-left:10px;
+                width:92%;
+                gap:8px;
+            }
             }
             </style>
 </head>
@@ -154,9 +130,15 @@
                     <input type="radio"class="genter" name="gender"><label>Male</label>
                     <input type="radio"class="genter" name="gender"><label>FeMale</label>
                 </div>
-                <div class="section--one--email">
+                <div class="section--one--course">
                     <p>Course:</p>
-                    <input type="email" placeholder="E-mail" class="email">
+                    <select class="sec" onchange="onchan()">
+                        <option >Java</option>
+                        <option > python</option>
+                        <option >javascript</option>
+                        <option >R</option>
+                        <option >Sql</option>
+                    </select>
                 </div>
             </div>
             <div class="section--one--address">

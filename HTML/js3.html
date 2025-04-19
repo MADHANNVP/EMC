@@ -1,7 +1,7 @@
 <body>
     <input type="text" onkeyup="up()" id="one">
     <h1 id="two"></h1>
-    <select >
+    <select class="sec" onchange="onchan()">
         <option >java</option>
         <option > python</option>
         <option >javascript</option>
@@ -15,5 +15,8 @@
        }
        var sec=document.querySelector(".sec")
        console.log(sec.textContent)
+       function onchan(){
+        h1.textContent=sec.value
+       }
     </script>
 </body>
