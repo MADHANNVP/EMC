@@ -7,11 +7,13 @@ body {
     width: 100vw;
     height: 100vh;
 }
-.container{
-    
+
+.container {
+
     background-color: #F0F8FF;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
+
 .navbar {
     background-color: #3e4444;
     color: white;
@@ -58,304 +60,324 @@ body {
     padding: 10px;
     display: none;
 }
-.navbar--scroll a{
+
+.navbar--scroll a {
     color: white;
     text-decoration: none;
 }
+
 .show {
-    display:block;
+    display: block;
 }
-.section--heading{
-    padding:4px;
-    margin:10px;
+
+.section--heading {
+    padding: 4px;
+    margin: 10px;
 }
-    .section--one {
-        padding: 4px;
-        margin: 10px;
-    }
-    .section--one p{
-        display: flex;
-        flex-shrink: 0;
-        padding:10px;
-    }
-    .section--one input{
-        padding:5px;
-        margin-left: 10px;
-        width:90%;
-        border:1px solid black;
-        outline: none;
-    }
-    .section--one--lastname {
-        padding: 4px;
-        margin: 10px;
-    }
-    .section--one--lastname p{
-        display: flex;
-        flex-shrink: 0;
-        padding:10px;
-    }
-    .section--one--lastname input{
-        padding:5px;
-        margin-left: 10px;
-        width:90%;
-        border:1px solid black;
-        outline: none;
-    }
-    
-    .section--one--date {
-        padding: 4px;
-        margin: 10px;
-    }
-    .section--one--date p{
-        display: flex;
-        flex-shrink: 0;
-        padding:10px;
-    }
-    .section--one--date input{
-        padding:5px;
-        margin-left: 10px;
-        width:90%;
-        border:1px solid black;
-        outline: none;
-    }
-    .section--one--email{
-        padding: 4px;
-        margin: 10px;
-    }
-    .section--one--email{
-        padding: 4px;
-        margin: 10px;
-    }
-    .section--one--email p{
-        display: flex;
-        flex-shrink: 0;
-        padding:10px;
-    }
-    .section--one--email input{
-        padding:5px;
-        margin-left: 10px;
-        width:90%;
-        border:1px solid black;
-        outline: none;
-    }
-    .section--one--address{
-        padding: 4px;
-        margin: 10px;
-        display: flex;
-        flex-direction: column;
-        gap:8px;
-    }
-    .section--one--address p {
-        display: flex;
-        flex-shrink: 0;
-        padding: 10px;
+
+.section--one {
+    padding: 4px;
+    margin: 10px;
+}
+
+.section--one p {
+    display: flex;
+    flex-shrink: 0;
+    padding: 10px;
+}
+
+.section--one input {
+    padding: 5px;
+    margin-left: 10px;
+    width: 90%;
+    border: 1px solid black;
+    outline: none;
+}
+
+.section--one--lastname {
+    padding: 4px;
+    margin: 10px;
+}
+
+.section--one--lastname p {
+    display: flex;
+    flex-shrink: 0;
+    padding: 10px;
+}
+
+.section--one--lastname input {
+    padding: 5px;
+    margin-left: 10px;
+    width: 90%;
+    border: 1px solid black;
+    outline: none;
+}
+
+.section--one--date {
+    padding: 4px;
+    margin: 10px;
+}
+
+.section--one--date p {
+    display: flex;
+    flex-shrink: 0;
+    padding: 10px;
+}
+
+.section--one--date input {
+    padding: 5px;
+    margin-left: 10px;
+    width: 90%;
+    border: 1px solid black;
+    outline: none;
+}
+
+.section--one--email {
+    padding: 4px;
+    margin: 10px;
+}
+
+.section--one--email {
+    padding: 4px;
+    margin: 10px;
+}
+
+.section--one--email p {
+    display: flex;
+    flex-shrink: 0;
+    padding: 10px;
+}
+
+.section--one--email input {
+    padding: 5px;
+    margin-left: 10px;
+    width: 90%;
+    border: 1px solid black;
+    outline: none;
+}
+
+.section--one--address {
+    padding: 4px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.section--one--address p {
+    display: flex;
+    flex-shrink: 0;
+    padding: 10px;
+}
+
+.street--address {
+    padding: 5px;
+    margin-left: 10px;
+    width: 90%;
+    border: 1px solid black;
+    outline: none;
+}
+
+.section--one--Gender {
+    padding: 4px;
+    margin: 10px;
+}
+
+.section--one--Gender p {
+    display: flex;
+    flex-shrink: 0;
+    padding: 10px;
+}
+
+.gender {
+    padding: 8px;
+    display: flex;
+    gap: 5px;
+}
+
+.city-state {
+    display: flex;
+    flex-direction: column;
+    width: 92%;
+    margin-left: 10px;
+    gap: 8px;
+}
+
+.city-state input {
+    display: flex;
+    flex-grow: 1;
+    padding: 5px;
+    border: 1px solid black;
+    outline: none;
+
+}
+
+.section--one--course {
+    display: flex;
+    align-items: center;
+}
+
+.sec {
+    padding: 4px;
+    width: 300px;
+    outline: none;
+    border: 1px solid black;
+}
+
+.save {
+    padding: 5px;
+    margin: 10px;
+    width: 100px;
+    background-color: aqua;
+    /* border:none; */
+    outline: none;
+    cursor: pointer;
+    animation-name: zome;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.save--div {
+    display: flex;
+    justify-content: center;
+
+}
+
+@keyframes zome {
+    0% {
+        transform: scale(0.8);
     }
 
-    .street--address {
-        padding: 5px;
-        margin-left: 10px;
-        width: 90%;
-        border: 1px solid black;
-        outline: none;
+    50% {
+        transform: scale(1);
     }
 
-    .section--one--Gender {
-        padding: 4px;
-        margin: 10px;
+    100% {
+        transform: scale(0.8);
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.navbar--2 {
+    background-color: #3e4444;
+    color: white;
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar--2--heading {
+    padding: 10px;
+}
+
+.navbar--2--btn {
+    width: 30px;
+    border: none;
+    outline: none;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 15px;
+    position: relative;
+}
+
+.navbar--2--btn span {
+    height: 3px;
+    width: 100%;
+    border-radius: 25px;
+    background-color: white;
+}
+
+.navbar--2--scroll {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    background-color: #3e4444;
+    color: white;
+    padding: 10px;
+    display: none;
+}
+
+.view {
+    display: block;
+}
+
+.navbar--2--scroll a {
+    color: white;
+    text-decoration: none;
+}
+
+.student--details {
+    width: 100vw;
+    height: 100vh;
+    background-color: #c68aff;
+    /* color:white; */
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table tr th {
+    padding: 10px;
+    border: 1px solid black;
+}
+
+table tr td {
+    padding: 10px;
+    border: 1px solid black;
+    color: aqua;
+}
+
+.reset {
+    padding: 3px;
+    height: 25px;
+    background-color: black;
+    color: white;
+    animation-name: zome;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+}
+
+.save--div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width:767px) {
+    .container {
+        width: 60%;
     }
 
-    .section--one--Gender p {
+    .main {
         display: flex;
-        flex-shrink: 0;
-        padding: 10px;
-    }
-
-    .gender {
-        padding: 8px;
-        display: flex;
-        gap: 5px;
+        justify-content: center;
     }
 
     .city-state {
         display: flex;
-        flex-direction: column;
-        width: 92%;
+        flex-direction: row;
         margin-left: 10px;
+        width: 92%;
         gap: 8px;
     }
 
-    .city-state input {
-        display: flex;
-        flex-grow: 1;
-        padding: 5px;
-        border: 1px solid black;
-        outline: none;
-
-    }
-
-    .section--one--course {
-        display: flex;
-        align-items: center;
-    }
-
-    .sec {
-        padding: 4px;
-        width: 300px;
-        outline: none;
-        border: 1px solid black;
-    }
-
-    .save {
-        padding: 5px;
-        margin: 10px;
-        width: 100px;
-        background-color: aqua;
-        /* border:none; */
-        outline: none;
-        cursor: pointer;
-        animation-name: zome;
-        animation-duration: 3s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: infinite;
-    }
-
-    .save--div {
-        display: flex;
-        justify-content: center;
-
-    }
-
-    @keyframes zome {
-        0% {
-            transform: scale(0.8);
-        }
-
-        50% {
-            transform: scale(1);
-        }
-
-        100% {
-            transform: scale(0.8);
-        }
-    }
-
-    .hidden {
-        display: none;
-    }
-
-    .navbar--2 {
-        background-color: #3e4444;
-        color: white;
-        display: flex;
-        height: 50px;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .navbar--2--heading {
-        padding: 10px;
-    }
-
-    .navbar--2--btn {
-        width: 30px;
-        border: none;
-        outline: none;
-        height: 30px;
-        display: flex;
-        justify-content: center;
-        gap: 3px;
-        flex-direction: column;
-        align-items: center;
-        background-color: transparent;
-        cursor: pointer;
-        margin: 15px;
-        position: relative;
-    }
-
-    .navbar--2--btn span {
-        height: 3px;
-        width: 100%;
-        border-radius: 25px;
-        background-color: white;
-    }
-
-    .navbar--2--scroll {
-        position: absolute;
-        right: 0;
-        top: 50px;
-        background-color: #3e4444;
-        color: white;
-        padding: 10px;
-        display: none;
-    }
-
-    .view {
-        display: block;
-    }
-
-    .navbar--2--scroll a {
-        color: white;
-        text-decoration: none;
-    }
-
-    .student--details {
-        width: 100vw;
-        height: 100vh;
-        background-color: #c68aff;
-        /* color:white; */
-    }
-
     table {
-        border: 1px solid black;
-        border-collapse: collapse;
+
+        width: fit-content;
     }
-
-    table tr th {
-        padding: 10px;
-        border: 1px solid black;
-    }
-
-    table tr td {
-        padding: 10px;
-        border: 1px solid black;
-        color: aqua;
-    }
-    .reset{
-        padding:3px;
-        height: 25px;
-        background-color: black;
-        color:white;
-        animation-name:zome;
-        animation-duration: 3s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: infinite;
-        cursor:pointer;
-     }
-     .save--div{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-     }
-    @media (min-width:767px) {
-        .container {
-            width: 60%;
-        }
-
-        .main {
-            display: flex;
-            justify-content: center;
-        }
-
-        .city-state {
-            display: flex;
-            flex-direction: row;
-            margin-left: 10px;
-            width: 92%;
-            gap: 8px;
-        }
-
-        table {
-
-            width: fit-content;
-        }
-    }
+}

@@ -34,63 +34,59 @@
         <main class="main">
             <div class="container">
                 <form id="myForm">
-                <h2 class="section--heading">Student Information</h2>
-                <div class="section--one">
-                    <p>FIRST NAME :</p>
-                    <input type="text" placeholder="First Name" class="first--name">
-                </div>
-                <div class="section--one--lastname">
-                    <p>LAST NAME :</p>
-                    <input type="text" placeholder="Last Name" class="last--name">
-                </div>
-                <div class="section--one--date">
-                    <p>Date Of Birth :</p>
-                    <input type="number" placeholder="mm-dd-yyyy" class="date">
-                </div>
-                <div class="section--one--date">
-                    <p>Age :</p>
-                    <input type="number" placeholder="Age" class="age">
-                </div>
-                <div class="section--one--email">
-                    <p>Email :</p>
-                    <input type="email" placeholder="E-mail" class="email">
-                </div>
-              <div class="section--one--Gender"> 
-                    <p>Gender :</p>
-                    <div class="gender">
-                        <label><input type="radio" name="he" value="me">me</label>
-                        <label><input type="radio" name="he" value="you">you</label>
-                        <!-- <input type="radio" class="genter" onclick="get(event)" name="he"><label>me</label>
-                        <input type="radio" class="genter" onclick="get(event)" name="he"><label>you</label> -->
-                        <!-- <input type="radio"  name="gender" onclick="click(event)"><label>Male</label>
-                        <input type="radio" class="genter" name="gender" onclick="click(event)"><label>FeMale</label> -->
+                    <h2 class="section--heading">Student Information</h2>
+                    <div class="section--one">
+                        <p>FIRST NAME :</p>
+                        <input type="text" placeholder="First Name" class="first--name">
                     </div>
-                    <div class="section--one--course">
-                        <p>Course:</p>
-                        <select class="sec">
-                            <option>Java</option>
-                            <option> python</option>
-                            <option>javascript</option>
-                            <option>R</option>
-                            <option>Sql</option>
-                        </select>
+                    <div class="section--one--lastname">
+                        <p>LAST NAME :</p>
+                        <input type="text" placeholder="Last Name" class="last--name">
                     </div>
-                </div> 
-                <div class="section--one--address">
-                    <p>Address :</p>
-                    <input type="text" placeholder="Street Address" class="street--address">
-                    <div class="city-state">
-                        <input type="text" placeholder="City" class="city">
-                        <input type="text" placeholder="State/Province">
+                    <div class="section--one--date">
+                        <p>Date Of Birth :</p>
+                        <input type="number" placeholder="mm-dd-yyyy" class="date">
                     </div>
-                    <div class="city-state">
-                        <input type="text" placeholder="Country " class="country">
-                        <input type="text" placeholder="ZIP Code" class="zip--code">
+                    <div class="section--one--date">
+                        <p>Age :</p>
+                        <input type="number" placeholder="Age" class="age">
                     </div>
-                </div> 
-                <div class="save--div"><button class="save" >Save</button> <input type="reset" class="reset"></div>
-            </div>  
-        </form>
+                    <div class="section--one--email">
+                        <p>Email :</p>
+                        <input type="email" placeholder="E-mail" class="email">
+                    </div>
+                    <div class="section--one--Gender">
+                        <p>Gender :</p>
+                        <div class="gender">
+                            <label><input type="radio" name="he" value="me">me</label>
+                            <label><input type="radio" name="he" value="you">you</label>
+                        </div>
+                        <div class="section--one--course">
+                            <p>Course:</p>
+                            <select class="sec">
+                                <option>Java</option>
+                                <option> python</option>
+                                <option>javascript</option>
+                                <option>R</option>
+                                <option>Sql</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="section--one--address">
+                        <p>Address :</p>
+                        <input type="text" placeholder="Street Address" class="street--address">
+                        <div class="city-state">
+                            <input type="text" placeholder="City" class="city">
+                            <input type="text" placeholder="State/Province">
+                        </div>
+                        <div class="city-state">
+                            <input type="text" placeholder="Country " class="country">
+                            <input type="text" placeholder="ZIP Code" class="zip--code">
+                        </div>
+                    </div>
+                    <div class="save--div"><button class="save">Save</button> <input type="reset" class="reset"></div>
+            </div>
+            </form>
         </main>
     </div>
     <div class="student--details hidden">
@@ -106,23 +102,22 @@
             </button>
         </nav>
         <div class="details " style="width:100%;">
-            <table  style="display:flex; flex-wrap:wrap;margin:10px;overflow-x: auto;">
+            <table style="display:flex; flex-wrap:wrap;margin:10px;overflow-x: auto;">
                 <tbody class="student--table">
-                <tr>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Date Of Birth</th>
-                    <th>Age</th>
-                    <th>Email</th>
-                    <!-- <th>Gender</th> -->
-                    <th>Course</th>
-                    <th>City</th>
-                    <th>Country</th>
-                    <th>StreetAddress</th>
-                    <th>Zip Code</th>
-                    <th>ACTION</th>
-                </tr>
-            </tbody>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Date Of Birth</th>
+                        <th>Age</th>
+                        <th>Email</th>
+                        <th>Course</th>
+                        <th>City</th>
+                        <th>Country</th>
+                        <th>StreetAddress</th>
+                        <th>Zip Code</th>
+                        <th>ACTION</th>
+                    </tr>
+                </tbody>
             </table>
         </div>
     </div>
