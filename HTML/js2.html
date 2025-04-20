@@ -1,6 +1,6 @@
 <html>
     <body>
-         <input type="text" placeholder="number 1" id = "num1" >        
+         <!-- <input type="text" placeholder="number 1" id = "num1" >        
          <input type="text" placeholder="number 2" id = "num2" ><br>
          <button onclick="add()">Add</button>
          <p id="result">Result is :</p>
@@ -12,6 +12,26 @@
                 var s=Number(num1.value)+Number(num2.value)
                 result.textContent="Result is : "+s
             }
-         </script>        
-    </body>
+         </script>         -->
+         <label>
+          <input type="radio" name="he" value="me">
+          me
+        </label>
+        
+        <label>
+          <input type="radio" name="he" value="you">
+          you
+        </label>
+         <script>
+           const radios = document.querySelectorAll('input[name="he"]');
+
+radios.forEach((radio) => {
+  radio.addEventListener('change', (event) => {
+    if (event.target.checked) {
+      console.log("You selected:", event.target.value);
+    }
+  });
+});
+          </script>
+        </body>
 </html>

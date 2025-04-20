@@ -15,24 +15,6 @@
 
     <link rel="stylesheet" href="studentform.css">
 
-    <style>
-     .reset{
-        padding:3px;
-        height: 25px;
-        background-color: black;
-        color:white;
-        animation-name:zome;
-        animation-duration: 3s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: infinite;
-        cursor:pointer;
-     }
-     .save--div{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-     }
-    </style>
 </head>
 
 <body>
@@ -76,12 +58,16 @@
               <div class="section--one--Gender"> 
                     <p>Gender :</p>
                     <div class="gender">
-                        <input type="radio" class="genter" name="gender"><label>Male</label>
-                        <input type="radio" class="genter" name="gender"><label>FeMale</label>
+                        <label><input type="radio" name="he" value="me">me</label>
+                        <label><input type="radio" name="he" value="you">you</label>
+                        <!-- <input type="radio" class="genter" onclick="get(event)" name="he"><label>me</label>
+                        <input type="radio" class="genter" onclick="get(event)" name="he"><label>you</label> -->
+                        <!-- <input type="radio"  name="gender" onclick="click(event)"><label>Male</label>
+                        <input type="radio" class="genter" name="gender" onclick="click(event)"><label>FeMale</label> -->
                     </div>
                     <div class="section--one--course">
                         <p>Course:</p>
-                        <select class="sec" onchange="onchan()">
+                        <select class="sec">
                             <option>Java</option>
                             <option> python</option>
                             <option>javascript</option>
@@ -94,12 +80,12 @@
                     <p>Address :</p>
                     <input type="text" placeholder="Street Address" class="street--address">
                     <div class="city-state">
-                        <input type="text" placeholder="City">
+                        <input type="text" placeholder="City" class="city">
                         <input type="text" placeholder="State/Province">
                     </div>
                     <div class="city-state">
-                        <input type="text" placeholder="Country">
-                        <input type="text" placeholder="ZIP Code">
+                        <input type="text" placeholder="Country " class="country">
+                        <input type="text" placeholder="ZIP Code" class="zip--code">
                     </div>
                 </div> 
                 <div class="save--div"><button class="save" >Save</button> <input type="reset" class="reset"></div>
@@ -128,27 +114,13 @@
                     <th>Date Of Birth</th>
                     <th>Age</th>
                     <th>Email</th>
-                    <th>Gender</th>
+                    <!-- <th>Gender</th> -->
                     <th>Course</th>
-                    <th>ACTION</th>
                     <th>City</th>
                     <th>Country</th>
                     <th>StreetAddress</th>
                     <th>Zip Code</th>
-                </tr>
-                <tr>
-                    <td>madhan</td>
-                    <td>madhan</td>
-                    <td>mad</td>
-                    <td>madh</td>
-                    <td>madhan</td>
-                    <td>madhan</td>
-                    <td>an</td>
-                    <td>madh</td>
-                    <td>madhan</td>
-                    <td>han</td>
-                    <td>madhan</td>
-                    <td>madh</td>
+                    <th>ACTION</th>
                 </tr>
             </tbody>
             </table>

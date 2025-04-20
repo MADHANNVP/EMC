@@ -38,22 +38,27 @@ navscr.addEventListener("click",function(){
     navbartwo.classList.remove("hidden")
 })
 function resetForm() {
-    document.getElementById("myForm").reset(); // clears all input fields
+    document.getElementById("myForm").reset(); 
 }
 var first_name=document.querySelector(".first--name")
 var last_name=document.querySelector(".last--name")
 var date=document.querySelector(".date")
+var age=document.querySelector(".age")
+var email=document.querySelector(".email")
 var save__btn=document.querySelector(".save--div")
 var student__table=document.querySelector(".student--table")
+var city=document.querySelector(".city")
+var country=document.querySelector(".country")
+var street__address=document.querySelector(".street--address")
+var zip__code=document.querySelector(".zip--code")
 save__btn.addEventListener("click",function(){
-    console.log(first_name.value)
 var tr1=document.createElement("tr")
 var td1=document.createElement("td")
 var td2=document.createElement("td")
 var td3=document.createElement("td")
 var td4=document.createElement("td")
 var td5=document.createElement("td")
-var td6=document.createElement("td")
+// var td6=document.createElement("td")
 var td7=document.createElement("td")
 var td8=document.createElement("td")
 var td9=document.createElement("td")
@@ -63,8 +68,44 @@ var td12=document.createElement("td")
 td1.textContent=first_name.value
 td2.textContent=last_name.value
 td3.textContent=date.value
-tr1.appendChild(td1)
-tr1.appendChild(td2)
-tr1.appendChild(td3)
-student__table.append(tr1)
-})
+td4.textContent=age.value
+td5.textContent=email.value
+var selectBox = document.querySelector(".sec");
+// console.log("Selected course:", selectBox.value);
+td7.textContent=selectBox.value;
+td8.textContent=city.value
+td9.textContent=country.value
+td10.textContent=street__address.value
+td11.textContent=zip__code.value
+td12.innerHTML="<button onclick="+"remover(event)"+">Delete</button>"
+// const radios = document.querySelectorAll('input[name="he"]');
+// radios.forEach((radio) => {
+    //   radio.addEventListener('change', (event) => {
+        //     if (event.target.checked) {
+            //       console.log("You selected:", event.target.value);
+            //       td6.textContent=event.target.value
+            //       tr1.appendChild(td6)
+            //       console.log("You selected:", td6);
+            //     }
+            // });
+            // });
+            
+            tr1.appendChild(td1)
+            tr1.appendChild(td2)
+            tr1.appendChild(td3)
+            tr1.appendChild(td4)
+            tr1.appendChild(td5)
+            tr1.appendChild(td7);
+            tr1.appendChild(td8)            
+            tr1.appendChild(td9)            
+            tr1.appendChild(td10)            
+            tr1.appendChild(td11)            
+            tr1.appendChild(td12)            
+            // .addEventListener("change", () => {
+            // });
+            student__table.append(tr1)
+        })
+        function remover(event){
+            event.target.parentElement.parentElement.remove()
+            // console.log()
+        }

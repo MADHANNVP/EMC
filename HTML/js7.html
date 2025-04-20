@@ -1,0 +1,13 @@
+<select class="sec" onchange="onchan()">
+    <option>Java</option>
+    <option>Python</option>
+    <option>JavaScript</option>
+    <option>R</option>
+    <option>SQL</option>
+</select>
+<script>
+    const selectBox = document.querySelector(".sec");
+
+selectBox.addEventListener("change", () => {
+    console.log("Selected course:", selectBox.value);
+});</script>
