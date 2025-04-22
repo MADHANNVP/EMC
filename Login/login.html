@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,28 +8,239 @@
 
     <link rel="stylesheet" href="login.css">
 
+    <!-- fontawasome -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
     <style>
-        *{
-            padding:0;
-            margin:0;
+        * {
+            padding: 0;
+            margin: 0;
         }
-         body{
-            width:100vw;
-            height:100vh;
+
+        body {
+            width: 100vw;
+            height: 100vh;
         }
-        #container{
-            width:100%;
-            height:100%;
-            background-image: url("image/img3.jpg");
-            background-size:cover;
+
+        #container {
+            width: 100%;
+            margin: 0;
+            background-image: url("image/bglo2.jpg");
+            background-size: cover;
+            background-position: center;
             background-repeat: no-repeat;
-            
-         }
+            height: 100vh;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: animateBg 5s linear infinite;
+
+        }
+
+        @keyframes animateBg {
+            100% {
+                filter: hue-rotate(360deg);
+            }
+        }
+
+        #login {
+            width: 350px;
+            height: 400px;
+            border: 3px solid white;
+            box-shadow: rgba(255, 254, 254, 0.56) 0px 0px 30px 10px;
+            background-color: transparent;
+            display: flex;
+            border-radius: 10px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            backdrop-filter: blur(10px);
+        }
+
+        #heading {
+            color: white;
+            position: absolute;
+            top: 25px;
+            padding: 3px;
+            text-align: center;
+
+        }
+
+        #email {
+            display: flex;
+            margin-top: 10px;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+            width: 80%;
+            color: white;
+            border-bottom: 2px solid white;
+            padding: 3px;
+        }
+
+        #email .email {
+            width: 92%;
+            padding: 20px 20px 0 20px;
+            border: none;
+            outline: none;
+            background: transparent;
+            z-index: 1;
+            color: white;
+        }
+
+        #email p {
+            position: absolute;
+            top: 5px;
+            left: 10px;
+        }
+
+        .mail {
+            transition: top 0.5s ease-in-out;
+        }
+
+        #email .mail {
+            position: absolute;
+            top: 5px;
+            display: inline-block;
+            right: 0;
+        }
+
+        #email input:valid~.mail,
+        #email input:focus~.mail {
+            top: -5px;
+        }
+
+        #password {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+            width: 80%;
+            color: white;
+            border-bottom: 2px solid white;
+            padding: 3px;
+            margin-top: 15px;
+        }
+
+        .password {
+            width: 92%;
+            padding: 20px 20px 0 20px;
+            border: none;
+            outline: none;
+            background: transparent;
+            z-index: 1;
+            color: white;
+        }
+
+        #password p {
+            position: absolute;
+            top: 5px;
+            left: 10px;
+        }
+
+        .pass {
+            transition: top 0.5s ease-in-out;
+        }
+
+        #password .pass {
+            position: absolute;
+            top: 5px;
+            display: inline-block;
+            right: 0;
+        }
+
+        #password input:valid~.pass,
+        #password input:focus~.pass {
+            top: -5px;
+        }
+
+        #remember_me {
+            width: 90%;
+            display: flex;
+            color: white;
+            justify-content: space-around;
+            padding: 10px;
+            margin: 10px;
+            margin-top: 20px;
+        }
+
+        .forgot {
+            cursor: pointer;
+        }
+
+        #submit {
+            width: 80%;
+        }
+
+        .btn {
+            padding: 10px;
+            width: 100%;
+            font-size: 17px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 500;
+            margin-top: 10px;
+            outline: none;
+            border: none;
+        }
+
+        #register {
+            color: white;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        #register a {
+            color: white;
+        }
     </style>
 </head>
+
 <body>
     <div id="container">
+        <form>
+            <div id="login">
+                <h1 id="heading">Login</h1>
+                <div id="email">
+                    <input type="email" required class="email">
+                    <p class="mail">Email ID</p>
+                    <i class="fa-regular fa-envelope mail"></i>
 
+                </div>
+
+                <div id="password">
+                    <input type="password" required class="password">
+                    <p class="pass">Password</p>
+                    <i class="fa-solid fa-lock pass"></i>
+                </div>
+
+
+                <div id="remember_me">
+                    <label for="mm"><input type="checkbox" class="remember_me" id="mm">
+                        Remember Me</label>
+                    <p class="forgot">Forgot Password?</p>
+                </div>
+
+                <div id="submit">
+                    <button class="btn">
+                        Login
+                    </button>
+                </div>
+
+                <div id="register">
+                    <p>Don't have an account? <a href="#">Register</a></p>
+                </div>
+            </div>
+        </form>
     </div>
 </body>
+
 </html>

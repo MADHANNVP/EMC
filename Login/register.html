@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+    #container{
+        width:100vw;
+        height:100vh;
+        background-image: url("image/bgl1\ \(9\).jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+        #date::placeholder,
+        #year::placeholder {
+            color: black;
+            text-align: center;
+
+        }
+
+        #container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #information {
+            width: 300px;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: antiquewhite;
+        }
+
+        #heading {
+            padding: 3px;
+            margin-top: 20px;
+            font-size: 37px;
+            display: flex;
+            align-items: center;
+        }
+
+        #heading p {
+            font-size: 25px;
+        }
+
+
+        #Basic--information {
+            padding: 3px;
+            margin-top: 8px;
+
+        }
+
+        #dob--and--gender {
+            padding: 3px;
+            font-weight: 900;
+            margin-top: 4px;
+        }
+
+        #dob--section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-top: 12px;
+            width: 80%;
+        }
+
+        #date,
+        #year {
+            width: 50px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+
+        #month {
+            width: 70px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+
+        #gender--section {
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        #gender {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid black;
+
+        }
+
+        #next {
+            width: 80%;
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 15px;
+        }
+
+        #next button {
+            padding: 10px 20px;
+            background-color: #2e89f0;
+            border: none;
+            border-radius: 5px;
+            cursor:pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="information">
+            <h1 id="heading">Orange <p>🍊</p>
+            </h1>
+            <h2 id="Basic--information">Basic information</h2>
+            <p id="dob--and--gender">Enter your birthday and gender</p>
+            <div id="dob--section">
+                <input type="number" placeholder="Day" id="date">
+                <select value="month" id="month">
+                    <option disabled selected value="">Month</option>
+                    <option>January</option>
+                    <option>February</option>
+                    <option>March</option>
+                    <option>April</option>
+                    <option>May</option>
+                    <option>June</option>
+                    <option>July</option>
+                    <option>August</option>
+                    <option>September</option>
+                    <option>October</option>
+                    <option>November</option>
+                    <option>December</option>
+                </select>
+                <input type="number" placeholder="Year" id="year">
+            </div>
+            <div id="gender--section">
+                <select id="gender">
+                    <option disabled selected value="">Gender</option>
+                    <option>Male</option>
+                    <option>FeMale</option>
+                </select>
+            </div>
+
+            <div id="next">
+                <button>Next</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
