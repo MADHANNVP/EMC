@@ -11,28 +11,24 @@
             padding: 0;
             margin: 0;
         }
-        
-    #container{
-        width:100vw;
-        height:100vh;
-        background-image: url("image/bgl1\ \(9\).jpg");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
+
+        #container {
+            width: 100vw;
+            height: 100vh;
+            background-image: url("image/bgl1\ \(9\).jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         #date::placeholder,
         #year::placeholder {
             color: black;
             text-align: center;
 
-        }
-
-        #container {
-            width: 100vw;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
 
         #information {
@@ -41,7 +37,12 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            background-color: antiquewhite;
+            border:3px solid white;
+            box-shadow: rgba(243, 242, 243, 0.438) 0px 0px 20px 50px;
+            box-shadow: rgba(174, 4, 226, 0.438) 0px 0px 30px 10px;
+            background-color:transparent;
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
         }
 
         #heading {
@@ -50,6 +51,7 @@
             font-size: 37px;
             display: flex;
             align-items: center;
+            color:white;
         }
 
         #heading p {
@@ -60,13 +62,14 @@
         #Basic--information {
             padding: 3px;
             margin-top: 8px;
-
+            color:white;
         }
 
         #dob--and--gender {
             padding: 3px;
             font-weight: 900;
             margin-top: 4px;
+            color:white;
         }
 
         #dob--section {
@@ -98,7 +101,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-top: 10px;
+            margin-top: 15px;
         }
 
         #gender {
@@ -113,7 +116,7 @@
             width: 80%;
             display: flex;
             justify-content: flex-end;
-            margin-top: 15px;
+            margin-top: 25px;
         }
 
         #next button {
@@ -121,7 +124,7 @@
             background-color: #2e89f0;
             border: none;
             border-radius: 5px;
-            cursor:pointer;
+            cursor: pointer;
         }
     </style>
 </head>
