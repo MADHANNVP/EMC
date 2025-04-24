@@ -63,16 +63,7 @@
             backdrop-filter: blur(10px);
         }
 
-        @media screen and (max-width:767px)
-        {
-            #login{
-                border:none;
-                box-shadow:none;
-                width:100vw;
-                height:100vh;
-            }
-        }
-
+        
         #heading {
             color: white;
             position: absolute;
@@ -166,7 +157,7 @@
             display: inline-block;
             right: 0;
         }
-
+        
         #password input:valid~.pass,
         #password input:focus~.pass {
             top: -5px;
@@ -181,7 +172,7 @@
             margin: 10px;
             margin-top: 20px;
         }
-
+        
         .forgot {
             cursor: pointer;
         }
@@ -201,15 +192,24 @@
             outline: none;
             border: none;
         }
-
+        
         #register {
             color: white;
             padding: 10px;
             margin-top: 10px;
         }
-
+        
         #register a {
             color: white;
+        }
+        @media screen and (max-width:767px)
+        {
+            #login{
+                border:none;
+                box-shadow:none;
+                width:100vw;
+                height:100vh;
+            }
         }
     </style>
 </head>
@@ -223,9 +223,9 @@
                     <input type="email" required class="email">
                     <p class="mail">Email ID</p>
                     <i class="fa-regular fa-envelope mail"></i>
-
+                    
                 </div>
-
+                
                 <div id="password">
                     <input type="password" required class="password">
                     <p class="pass">Password</p>
@@ -246,7 +246,7 @@
                 </div>
 
                 <div id="register">
-                    <p>Don't have an account? <a href="#">Register</a></p>
+                    <p>Don't have an account? <a href="register.html">Register</a></p>
                 </div>
             </div>
         </form>

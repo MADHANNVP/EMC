@@ -24,12 +24,7 @@
             align-items: center;
         }
 
-        #date::placeholder,
-        #year::placeholder {
-            color: black;
-            text-align: center;
 
-        }
 
         #information {
             width: 300px;
@@ -37,13 +32,14 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            border:3px solid white;
+            border: 3px solid white;
             box-shadow: rgba(243, 242, 243, 0.438) 0px 0px 20px 50px;
-            box-shadow: rgba(174, 4, 226, 0.438) 0px 0px 30px 10px;
-            background-color:transparent;
+            box-shadow: rgba(174, 4, 226, 0.438) 0px 0px 50px 30px;
+            background-color: transparent;
             backdrop-filter: blur(10px);
             border-radius: 10px;
         }
+
 
         #heading {
             padding: 3px;
@@ -51,7 +47,7 @@
             font-size: 37px;
             display: flex;
             align-items: center;
-            color:white;
+            color: white;
         }
 
         #heading p {
@@ -62,14 +58,14 @@
         #Basic--information {
             padding: 3px;
             margin-top: 8px;
-            color:white;
+            color: white;
         }
 
         #dob--and--gender {
             padding: 3px;
             font-weight: 900;
             margin-top: 4px;
-            color:white;
+            color: white;
         }
 
         #dob--section {
@@ -86,14 +82,31 @@
             width: 50px;
             padding: 10px;
             border-radius: 5px;
-            border: 1px solid black;
+            border: 1px solid white;
+            outline: none;
+            background-color: transparent;
+            color: white;
         }
 
         #month {
-            width: 70px;
+            width: 80px;
             padding: 10px;
             border-radius: 5px;
-            border: 1px solid black;
+            border: 1px solid white;
+            outline: none;
+            background-color: transparent;
+            color: white;
+        }
+
+        #month option {
+            color: black;
+        }
+
+        #date::placeholder,
+        #year::placeholder {
+            color: white;
+            text-align: center;
+
         }
 
         #gender--section {
@@ -108,8 +121,15 @@
             width: 100%;
             padding: 10px;
             border-radius: 5px;
-            border: 1px solid black;
+            border: 1px solid white;
+            background-color: transparent;
+            color: white;
+            outline: none;
 
+        }
+
+        #gender option {
+            color: black;
         }
 
         #next {
@@ -126,48 +146,292 @@
             border-radius: 5px;
             cursor: pointer;
         }
+
+        .section--2 {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #section--2--heading {
+            padding: 3px;
+            margin-top: 20px;
+            font-size: 37px;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        #section--2--heading p {
+            font-size: 25px;
+        }
+
+        #section--2--desc {
+            color: white;
+            margin-top: 10px;
+        }
+
+        #section--2--des {
+            color: white;
+            margin-top: 10px;
+        }
+
+        #name {
+            color: white;
+            padding: 10px;
+            width: 80%;
+            background-color: transparent;
+            border: 1px solid white;
+            outline: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        #name::placeholder {
+            color: white
+        }
+
+        #surname {
+            color: white;
+            padding: 10px;
+            width: 80%;
+            background-color: transparent;
+            border: 1px solid white;
+            outline: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        #surname::placeholder {
+            color: white
+        }
+
+        #nextname {
+            background-color: #2e89f0;
+            padding: 10px 20px;
+            border: 1px solid #2e89f0;
+            border-radius: 5px;
+            outline: none;
+            margin-top: 30px;
+            cursor: pointer;
+        }
+
+        #nextbtn {
+            width: 90%;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .section--3 {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #section--3--heading {
+            padding: 3px;
+            margin-top: 20px;
+            font-size: 37px;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        #section--3--heading p {
+            font-size: 25px;
+        }
+
+        #section--3--desc {
+            color: white;
+            margin-top: 10px;
+        }
+
+        #section--3--des {
+            color: white;
+            margin-top: 10px;
+        }
+
+        #Account {
+            color: white;
+            margin-top: 5px;
+            font-weight: 900;
+            font-size: 17px;
+        }
+
+        #topbar {
+            color: white;
+            font-size: 12px;
+            width:90%;
+            margin-top:20px;
+            border-radius: 5px;
+        }
+
+        #email {
+            color:white;
+            width: 100%;
+            background-color: transparent;
+            border:none;
+            outline: none;
+            padding:5px;
+
+        }
+
+        #email::placeholder{
+            color: white;
+        }
+
+        #password{
+            padding:10px;
+            outline:none;
+            border:1px solid white;
+            border-radius:5px;
+            margin-top:10px;
+            background-color: transparent;
+            width:82%;
+            color:white;
+        }
+
+        #password::placeholder{
+            color:white;
+        }
+
+        #nextbutton{
+            display: flex;
+            justify-content: flex-end;
+            width:90%;
+            margin-top:20px;
+        }
+
+        #conformbtn{
+            padding:10px 20px;
+            border:1px solid #2e89f0;
+            outline:none;
+            background-color: #2e89f0;
+            border-radius: 5px;
+            cursor:pointer;
+        }
+
+        #conformbtn a{
+            color:white;
+            text-decoration: none;
+        }
+
+        
+        .section--one{
+            width:100%;
+            height:100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .displayhidden{
+            display:none;
+        }
+
+        .displayshow{
+            display:flex;
+        }
     </style>
 </head>
 
 <body>
+    <form id="myform">
     <div id="container">
         <div id="information">
-            <h1 id="heading">Orange <p>🍊</p>
-            </h1>
-            <h2 id="Basic--information">Basic information</h2>
-            <p id="dob--and--gender">Enter your birthday and gender</p>
-            <div id="dob--section">
-                <input type="number" placeholder="Day" id="date">
-                <select value="month" id="month">
-                    <option disabled selected value="">Month</option>
-                    <option>January</option>
-                    <option>February</option>
-                    <option>March</option>
-                    <option>April</option>
-                    <option>May</option>
-                    <option>June</option>
-                    <option>July</option>
-                    <option>August</option>
-                    <option>September</option>
-                    <option>October</option>
-                    <option>November</option>
-                    <option>December</option>
-                </select>
-                <input type="number" placeholder="Year" id="year">
-            </div>
-            <div id="gender--section">
-                <select id="gender">
-                    <option disabled selected value="">Gender</option>
-                    <option>Male</option>
-                    <option>FeMale</option>
-                </select>
-            </div>
+            <section class="section--one ">
+                <h1 id="heading">Orange <p>🍊</p>
+                </h1>
+                <h2 id="Basic--information">Basic information</h2>
+                <p id="dob--and--gender">Enter your birthday and gender</p>
+                <div id="dob--section">
+                    <input type="text" placeholder="Day" id="date" required>
+                    <select value="month" id="month" required>
+                        <option disabled selected value="">Month</option>
+                        <option>January</option>
+                        <option>February</option>
+                        <option>March</option>
+                        <option>April</option>
+                        <option>May</option>
+                        <option>June</option>
+                        <option>July</option>
+                        <option>August</option>
+                        <option>September</option>
+                        <option>October</option>
+                        <option>November</option>
+                        <option>December</option>
+                    </select>
+                    <input type="text" placeholder="Year" id="year" required>
+                </div>
+                <div id="gender--section" >
+                    <select id="gender" required>
+                        <option disabled selected value="">Gender</option>
+                        <option>Male</option>
+                        <option>FeMale</option>
+                    </select>
+                </div>
 
-            <div id="next">
-                <button>Next</button>
-            </div>
+                <div id="next">
+                    <button>Next</button>
+                </div>
+
+
+            </section>
+            <!-- section 2 -->
+
+            <section class="section--2">
+                <h1 id="section--2--heading">Orange<p>🍊</p>
+                </h1>
+                <h2 id="section--2--desc">Create a Orange Account</h2>
+                <p id="section--2--des">Enter Your Name</p>
+                <input type="text" id="name" name="First--name" placeholder="First Name">
+                <input type="text" id="surname" name="Surname" placeholder="Surname (optional)">
+                <div id="nextbtn">
+                    <button id="nextname">Next</button>
+                </div>
+            </section>
+
+
+            <!-- section 3 -->
+
+            <section class="section--3">
+                <h1 id="section--3--heading">Orange<p>🍊</p>
+                </h1>
+                <h2 id="section--3--desc">Choose how you'll sign in</h2>
+                <p id="section--3--des">You'll use this email to sign in to your</p>
+                <p id="Account">Orange Account</p>
+                <fieldset id="topbar">
+                    <legend>Create a Gmail Address</legend>
+                    <input type="email" id="email" placeholder="xxxx@gmail.com">
+                </fieldset>
+                <input type="password" id="password" placeholder="Password">
+                <div id="nextbutton">
+                    <button id="conformbtn" onclick="print()"><a href="login.html">Conform</a></button>
+                </div>
+            </section>
         </div>
     </div>
+</form>
+    <script>
+      
+      const next = document.getElementById("next");
+    const section_one = document.querySelector(".section--one");
+    const section_two = document.querySelector(".section--2");
+    const nextname = document.getElementById("nextname");
+    const section_three = document.querySelector(".section--3");
+
+    next.addEventListener("click", function () {
+        section_one.classList.add("displayhidden");
+        section_two.classList.add("displayshow");
+        // section_two.style.display = "flex";
+    });
+
+    nextname.addEventListener("click",function(){
+        section_two.classList.remove("displayshow");
+        section_three.classList.add("displayshow");
+
+
+    })
+    </script>
 </body>
 
 </html>

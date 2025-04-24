@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+
+    <h1 id="one" style="color:black;">Form</h1>
+    <form id="myForm">
+        <table>
+            <tr>
+                <td><label>NAME :</label></td>
+                <td><input type="text" id="name" name="name"></td>
+            </tr>
+            <tr>
+                <td><label for="password">PASSWORD :</label></td>
+                <td><input type="password" id="password" name="password"></td>
+            </tr>
+            <tr>
+                <td><label for="gender">Gender :</label></td>
+                <td>
+                    <select id="gender" name="gender">
+                        <option disabled selected value="">Gender</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Hobbies</label></td>
+                <td>
+                    <input type="checkbox" name="hobbies" value="Gaming"><label>Gaming</label>
+                    <input type="checkbox" name="hobbies" value="Programming"><label>Programming</label>
+                    <input type="checkbox" name="hobbies" value="Non-techines"><label>Non-techines</label>
+                    <input type="checkbox" name="hobbies" value="Movies"><label>Movies</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Course :</label></td>
+                <td>
+                    <input type="radio" name="course" value="Java"><label>Java</label>
+                    <input type="radio" name="course" value="Python"><label>Python</label>
+                    <input type="radio" name="course" value="JavaScript"><label>JavaScript</label>
+                    <input type="radio" name="course" value="R"><label>R</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" id="submit" value="Submit">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+     const forms = document.getElementById("myForm");
+
+forms.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+ const hobb=document.querySelectorAll('input[name="hobbies"]:checked');
+ const anss=Array.from(hobb).map(hobb => hobb.value).join(" ,")
+ console.log(anss)
+})
+    </script>
+
+</body>
+
+</html>
