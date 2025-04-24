@@ -22,9 +22,13 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            animation: animateBg 5s infinite linear;
         }
-
-
+        @keyframes animateBg {
+            100% {
+                filter: hue-rotate(360deg);
+            }
+        }
 
         #information {
             width: 300px;
@@ -405,7 +409,7 @@
                 </fieldset>
                 <input type="password" id="password" placeholder="Password">
                 <div id="nextbutton">
-                    <button id="conformbtn" onclick="print()"><a href="login.html">Conform</a></button>
+                    <button id="conformbtn"><a href="login.html">Conform</a></button>
                 </div>
             </section>
         </div>
@@ -419,13 +423,15 @@
     const nextname = document.getElementById("nextname");
     const section_three = document.querySelector(".section--3");
 
-    next.addEventListener("click", function () {
+    next.addEventListener("click", function (e) {
+        e.preventDefault();
         section_one.classList.add("displayhidden");
         section_two.classList.add("displayshow");
         // section_two.style.display = "flex";
     });
 
-    nextname.addEventListener("click",function(){
+    nextname.addEventListener("click",function(e){
+        e.preventDefault();
         section_two.classList.remove("displayshow");
         section_three.classList.add("displayshow");
 
