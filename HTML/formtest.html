@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gender</title>
+</head>
+
+<body>
+    <div>
+        <input type="radio" name="gender" value="male" id="male"><label for="male">Male</label>
+        <input type="radio" name="gender" value="female" id="female"><label for="female">FeMale</label>
+        <h1 id="result"></h1>
+    </div>
+
+    <div>
+        <input type="checkbox" name="check" value="Python" id="python"><label for="python">python</label>
+        <input type="checkbox" name="check" value="Java" id="java"><label for="java">java</label>
+        <input type="checkbox" name="check" value="C" id="c"><label for="c">c</label>
+        <h1 id="result1"></h1>
+    </div>
+    <script>
+
+        const gender = document.getElementsByName("gender");
+        const result = document.getElementById("result");
+        const check = document.getElementsByName("check");
+        const result1 = document.getElementById("result1");
+        for (i = 0; i < 2; i++) {
+            gender[i].addEventListener("click", function () {
+                result.textContent = event.target.value;
+            })
+        }
+       skill=[]
+        for(i = 0 ; i<3 ; i++)
+        {
+            check[i].addEventListener("click",function(){
+            if(event.target.checked)
+        {
+            skill.push(event.target.value)
+            result1.textContent=skill
+        }
+        else {
+            var index = skill.indexOf(event.target.value)
+            skill.splice(index,1)
+            result1.textContent=skill
+            
+    }
+        })
+}
+    </script>
+</body>
+
+</html>

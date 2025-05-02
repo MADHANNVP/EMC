@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        span{
+            color:red;
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <form action="#">
+    <table>
+        <tr>
+            <td>Name :</td>
+            <td><input type="text" id="name" ></td>
+            <td><span class="nameerror">Enter the coorct formate name</span></td>
+        </tr>
+        <tr>
+            <td>Phone no :</td>
+            <td><input type="number" id="phone"></td>
+            <td><span class="phoneerror">Enter the coorct formate phone number</span></td>
+        </tr>
+        <tr>
+            <td>Email :</td>
+            <td><input type="email" id="email" ></td>
+            <td><span class="emailerror">Enter the coorct formate email</span></td>
+        </tr>
+    </table>
+    <input type="submit" id="submit">
+</form>
+    <script>
+     const name=document.getElementById("name");
+     const phone=document.getElementById("phone");
+     const email=document.getElementById("email");
+     const submit=document.getElementById("submit");
+
+    let nameregex=/^[a-zA-Z]+$/
+    let phoneregex=/^\d{10}$/
+    let emailregex =/^[a-zA-Z0-9]+@gmail\.com/
+
+    submit.addEventListener("click",function(){
+        event.preventDefault()
+    value=true
+    if(nameregex.test(name.value)==false)
+    {
+        document.querySelector(".nameerror").style.display="inline"
+    }
+    else
+    {
+        document.querySelector(".nameerror").style.display="none"
+
+    }
+    if(emailregex.test(email.value)==false)
+    {
+        document.querySelector(".emailerror").style.display="inline"
+    }
+    if(phoneregex.test(phone.value)==false)
+    {
+        document.querySelector(".phoneerror").style.display="inline"
+    }
+})
+    </script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOSTRA</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        @keyframes toptobottum {
+            0% {
+                height: 0;
+                transform: scale(0.9);
+            }
+
+            100% {
+                height: 40px;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes zome {
+            0% {
+                transform: scale(0.8);
+            }
+
+            50% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(0.8);
+            }
+        }
+
+        /* section 1 */
+
+        #offerbar {
+            animation: toptobottum 0.3s ease-in-out;
+        }
+
+        .offerbar--descrpe {
+            height: 40px;
+            background-color: rgb(32, 32, 32);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 3px;
+        }
+
+        .offerbar--offer {
+            margin-right: 20px;
+            cursor: context-menu;
+        }
+
+        .offerbar--close {
+            margin-left: 20px;
+            cursor: pointer;
+            color: red;
+            animation: zome 1s infinite linear;
+        }
+
+        .offerbar--offer p a {
+            color: white;
+        }
+
+        /* section 2 */
+
+        .sliders {
+            height: 500px;
+        }
+
+        .slider {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slider::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); 
+            z-index: 2;
+        }
+
+        .slider img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: relative;
+            z-index: 1;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- section 1 -->
+
+    <section id="offerbar">
+        <div class="offerbar--descrpe">
+            <div class="offerbar--offer">
+                <p>"New Movie Maaman Coming Soon:"
+                    <a href="https://www.youtube.com/watch?v=RFxRhOVGp4U" target="_blank">Click here</a>
+                </p>
+            </div>
+            <div class="offerbar--close">
+                X
+            </div>
+        </div>
+    </section>
+
+    <!-- section 2 -->
+
+    <section id="section--2">
+        <div class="sliders">
+            <div class="slider active">
+                <img src="image/Dragon.jpg" alt="Dragon" title="Dragon">
+            </div>
+            <div class="slider hidden">
+                <img src="image/2.jpg" alt="Nilavuku en mel ennadi kobam" title="nilavuku en mel ennadi kobam">
+            </div>
+            <div class="slider hidden">
+                <img src="image/3.jpg" alt="Retro" title="Retro">
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let offerbar = document.querySelector(".offerbar--close");
+        offerbar.addEventListener("click", function () {
+            offerbar.parentElement.parentElement.parentElement.remove();
+        });
+    </script>
+
+</body>
+
+</html>

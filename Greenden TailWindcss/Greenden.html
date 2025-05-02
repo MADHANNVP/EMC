@@ -12,17 +12,34 @@
 <body>
   <nav class="bg-green-100 flex justify-between p-5 items-center shadow-xl sticky top-0 z-10 ">
     <h1 class="text-2xl">GREENDEN</h1>
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-      class="w-8 md:hidden cursor-pointer ">
+    <svg id="sidebarbtn" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+      stroke="currentColor" class="w-8 md:hidden cursor-pointer ">
       <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
     </svg>
-
     <ul class="flex gap-5 hidden md:flex">
-      <li><a href="https://madhannvp.github.io/EMC/Greenden%20TailWindcss/Greenden.html" class="text-gray-600 hover:underline hover:text-black">Home </a></li>
-      <li><a href="https://madhannvp.github.io/EMC/Greenden%20TailWindcss/Products.html" class="text-gray-600 hover:underline hover:text-black">Products</a></li>
-      <li><a href="https://madhannvp.github.io/EMC/Greenden%20TailWindcss/Contact.html" class="text-gray-600 hover:underline hover:text-black">Contact</a></li>
+      <li><a href="https://madhannvp.github.io/EMC/Greenden%20TailWindcss/Greenden.html"
+          class="text-gray-600 hover:underline hover:text-black">Home </a></li>
+      <li><a href="https://madhannvp.github.io/EMC/Greenden%20TailWindcss/Products.html"
+          class="text-gray-600 hover:underline hover:text-black">Products</a></li>
+      <li><a href="https://madhannvp.github.io/EMC/Greenden%20TailWindcss/Contact.html"
+          class="text-gray-600 hover:underline hover:text-black">Contact</a></li>
     </ul>
   </nav>
+
+  <div id="sidebar" class="bg-green-100 fixed transition-all" style="width:200px; height:100vh; right:-200px;">
+    <p class="right-0 flex justify-end p-5 cursor-pointer" id="close">
+      X
+    </p>
+    <ul class="flex flex-col gap-6 items-center">
+      <li><a href="https://madhannvp.github.io/EMC/Greenden%20TailWindcss/Greenden.html"
+          class="text-gray-600 hover:underline hover:text-black">Home </a></li>
+      <li><a href="https://madhannvp.github.io/EMC/Greenden%20TailWindcss/Products.html"
+          class="text-gray-600 hover:underline hover:text-black">Products</a></li>
+      <li><a href="https://madhannvp.github.io/EMC/Greenden%20TailWindcss/Contact.html"
+          class="text-gray-600 hover:underline hover:text-black">Contact</a></li>
+    </ul>
+
+  </div>
   <section class="bg-green-100 p-10 flex justify-center items-center">
     <div>
       <p class="m-5 text-1xl">We Ofter You wide Range of Artificial and Natural Flowers</p>
@@ -54,8 +71,9 @@
           Fugiat, odio fuga. Porro, doloremque culpa. Quis inventore delectus corrupti officiis voluptatum dolorem
           quisquam.</p>
       </div>
-      <div class=" border-2 border-black p-5 m-5 text-center flex justify-center items-center flex-col"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-          stroke="currentColor" class="w-16 animate-bounce">
+      <div class=" border-2 border-black p-5 m-5 text-center flex justify-center items-center flex-col"><svg
+          xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-16 animate-bounce">
           <path stroke-linecap="round" stroke-linejoin="round"
             d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 0 0-3.7-3.7 48.678 48.678 0 0 0-7.324 0 4.006 4.006 0 0 0-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 0 0 3.7 3.7 48.656 48.656 0 0 0 7.324 0 4.006 4.006 0 0 0 3.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3-3 3" />
         </svg>
@@ -64,8 +82,9 @@
           asperiores magni recusandae. Blanditiis ab ipsam deleniti modi cum debitis voluptatibus hic, ipsum quaerat.
         </p>
       </div>
-      <div class="border-2 border-black p-5 m-5 text-center flex justify-center items-center flex-col"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-          stroke="currentColor" class="w-16 animate-bounce">
+      <div class="border-2 border-black p-5 m-5 text-center flex justify-center items-center flex-col"><svg
+          xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-16 animate-bounce">
           <path stroke-linecap="round" stroke-linejoin="round"
             d="M14.25 9.75v-4.5m0 4.5h4.5m-4.5 0 6-6m-3 18c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 0 1 4.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 0 0-.38 1.21 12.035 12.035 0 0 0 7.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 0 1 1.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 0 1-2.25 2.25h-2.25Z" />
         </svg>
@@ -80,55 +99,74 @@
   <section>
     <h1 class="font-bold text-3xl text-center mb-10">Best Seller</h1>
     <div class="text-center grid grid-cols-2 md:grid-cols-4">
-    <div class="grid justify-center ">
-      <img src="image/bestSeller_1.png" alt="" class="hover:shadow-xl transform hover:translate-y-0.5">
-      <h1>Rose Plant</h1>
-      <p>$20</p>
+      <div class="grid justify-center ">
+        <img src="image/bestSeller_1.png" alt="" class="hover:shadow-xl transform hover:translate-y-0.5">
+        <h1>Rose Plant</h1>
+        <p>$20</p>
+      </div>
+      <div class="grid justify-center ">
+        <img src="image/bestSeller_2.png" alt="" class="hover:shadow-xl transform hover:translate-y-0.5">
+        <h1>Rose Plant</h1>
+        <p>$20</p>
+      </div>
+      <div class="grid justify-center ">
+        <img src="image/bestSeller_3.png" alt="" class="hover:shadow-xl transform hover:translate-y-0.5">
+        <h1>Rose Plant</h1>
+        <p>$20</p>
+      </div>
+      <div class="grid justify-center ">
+        <img src="image/bestSeller_4.png" alt="" class="hover:shadow-xl transform hover:translate-y-0.5">
+        <h1>Rose Plant</h1>
+        <p>$20</p>
+      </div>
     </div>
-    <div class="grid justify-center ">
-      <img src="image/bestSeller_2.png" alt="" class="hover:shadow-xl transform hover:translate-y-0.5">
-      <h1>Rose Plant</h1>
-      <p>$20</p>
-    </div>
-    <div class="grid justify-center ">
-      <img src="image/bestSeller_3.png" alt="" class="hover:shadow-xl transform hover:translate-y-0.5">
-      <h1>Rose Plant</h1>
-      <p>$20</p>
-    </div>
-    <div class="grid justify-center ">
-      <img src="image/bestSeller_4.png" alt="" class="hover:shadow-xl transform hover:translate-y-0.5">
-      <h1>Rose Plant</h1>
-      <p>$20</p>
-    </div>
-  </div>
   </section>
-   <section>
+  <section>
     <h1 class="font-bold text-center text-3xl mt-8">Customer Reviews</h1>
     <div class="bg-green-900 text-white p-8 m-8">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In necessitatibus ipsam nam numquam illum, possimus sit culpa est voluptatum fuga quas nulla laboriosam. Eius consectetur numquam enim cum dignissimos? Sunt.</p>
-       <p class="text-yellow-500">Genny Mathew</p>   
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In necessitatibus ipsam nam numquam illum, possimus
+        sit culpa est voluptatum fuga quas nulla laboriosam. Eius consectetur numquam enim cum dignissimos? Sunt.</p>
+      <p class="text-yellow-500">Genny Mathew</p>
     </div>
     <div class="bg-green-900 text-white p-8 m-8">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In necessitatibus ipsam nam numquam illum, possimus sit culpa est voluptatum fuga quas nulla laboriosam. Eius consectetur numquam enim cum dignissimos? Sunt.</p>
-       <p class="text-yellow-500">Jim</p>   
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In necessitatibus ipsam nam numquam illum, possimus
+        sit culpa est voluptatum fuga quas nulla laboriosam. Eius consectetur numquam enim cum dignissimos? Sunt.</p>
+      <p class="text-yellow-500">Jim</p>
     </div>
     <div class="bg-green-900 text-white p-8 m-8">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In necessitatibus ipsam nam numquam illum, possimus sit culpa est voluptatum fuga quas nulla laboriosam. Eius consectetur numquam enim cum dignissimos? Sunt.</p>
-       <p class="text-yellow-500">Amir</p>   
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In necessitatibus ipsam nam numquam illum, possimus
+        sit culpa est voluptatum fuga quas nulla laboriosam. Eius consectetur numquam enim cum dignissimos? Sunt.</p>
+      <p class="text-yellow-500">Amir</p>
     </div>
-   </section>
-   <section class="text-center">
+  </section>
+  <section class="text-center">
     <h1 class="font-bold text-3xl">Join our News Letter</h1>
     <p>Signup for our email newspaper to get exclusive discounts, updates, and more</p>
     <input type="text" class="border border-black p-1 m-2 " style="width:60%"> <br>
     <button class="bg-black text-white underline p-2 m-2 animate-pulse">Subscibe</button>
-   </section>
-   <section class="bg-green-100 p-8 grid gap-5">
+  </section>
+  <section class="bg-green-100 p-8 grid gap-5">
     <h2 class="font-bold text-3xl ">Greenden</h2>
     <p>The Standard Chunk of Lorem ipsum used since the 1500s is reprodused below for those interest</p>
     <p>@ 2025 Greeday.com</p>
 
-   </section>
+  </section>
+
+
+
+  <script>
+    const close = document.getElementById("close");
+    const sidebar = document.getElementById("sidebar")
+    const sitebarbtn = document.getElementById("sidebarbtn");
+
+    sitebarbtn.addEventListener("click",function(){
+      sidebar.style.right="0px"
+    })
+
+    close.addEventListener("click",function(){
+      sidebar.style.right="-200px7";
+    })
+  </script>
 </body>
 
 </html>

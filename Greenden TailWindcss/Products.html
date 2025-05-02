@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products</title>
+    <style>
+        div{
+            
+        }
+    </style>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
@@ -20,50 +25,50 @@
           <li><a href="https://madhannvp.github.io/EMC/Greenden%20TailWindcss/Contact.html" class="text-gray-600 hover:underline hover:text-black">Contact</a></li>
         </ul>
       </nav>
-      <section class="text-center">
+      <section class="text-center" id="container1">
         <h1 class="font-bold text-3xl text-center mt-5">Our Products</h1>
-        <input type="text" placeholder="Search for a Product" class="border border-black mt-3 p-1" style="width:60%">
+        <input type="text" placeholder="Search for a Product" id="search" class="border border-black mt-3 p-1" style="width:60%">
         <div class="text-center grid grid-cols-2 md:grid-cols-4 mt-5">
             <div class="text-center grid justify-center itmes-center">
                 <img src="https://picsum.photos/200/250" alt="">
-                <p>Rose Plant</p>
+                <h1>Rose Plant</h1>
                 <p>$20</p>
             </div>
             <div class="text-center grid justify-center itmes-center">
                 <img src="https://picsum.photos/seed/picsum/200/250" alt="">
-                <p>Lily Plant</p>
+                <h1>Lily Plant</h1>
                 <p>$20</p>
             </div>
             <div class="text-center grid justify-center itmes-center">
                 <img src="https://picsum.photos/200/250?grayscale" alt="">
-                <p>Hibiscus Rose</p>
+                <h1>Hibiscus Rose</h1>
                 <p>$20</p>
             </div>
             <div class="text-center grid justify-center itmes-center">
                 <img src="https://picsum.photos/201/250?grayscale" alt="">
-                <p>New pet Plant</p>
+                <h1>New pet Plant</h1>
                 <p>$20</p>
             </div>
-        </div>
-        <div class="text-center grid grid-cols-2 md:grid-cols-4 mt-8">
+        <!-- </div> -->
+        <!-- <div class="text-center grid grid-cols-2 md:grid-cols-4 mt-8"> -->
             <div class="text-center grid justify-center itmes-center">
                 <img src="https://picsum.photos/199/250?grayscale" alt="">
-                <p>Rose Plant</p>
+                <h1>Rose Plant</h1>
                 <p>$20</p>
             </div>
             <div class="text-center grid justify-center itmes-center">
                 <img src="https://picsum.photos/201/250" alt="">
-                <p>Lily Plant</p>
+                <h1>Lily Plant</h1>
                 <p>$20</p>
             </div>
             <div class="text-center grid justify-center itmes-center">
                 <img src="https://picsum.photos/199/250" alt="">
-                <p>Hibiscus Rose</p>
+                <h1>Hibiscus Rose</h1>
                 <p>$20</p>
             </div>
             <div class="text-center grid justify-center itmes-center">
                 <img src="https://picsum.photos/seed/picsum/201/250" alt="">
-                <p>New pet Plant</p>
+                <h1>New pet Plant</h1>
                 <p>$20</p>
             </div>
         </div>
@@ -74,5 +79,28 @@
      <p>@ 2025 Greeday.com</p>
  
     </section>
+
+
+    <script>
+        const search = document.getElementById("search");
+        const container = document.getElementById("container1");
+        const selectdiv = container.querySelectorAll("div");
+        search.addEventListener("keyup",function(){
+            const searchElement = event.target.value.toUpperCase();
+            for(i=0 ; i<selectdiv.length ; i++)
+            {
+            const protectlist = selectdiv[i].querySelector("h1");
+            if(protectlist.textContent.toUpperCase().indexOf(searchElement)<0)
+        {
+            selectdiv[i].style.display="none";
+        }
+         else
+         {
+            selectdiv[i].style.display="grid"
+            
+        }
+        }
+        })
+    </script>
 </body>
 </html>
