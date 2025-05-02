@@ -27,7 +27,7 @@
 
     .navbar {
       width: 40%;
-      display: flex;
+      display: none;
       justify-content: space-evenly;
       align-items: center;
     }
@@ -77,11 +77,39 @@
     .logo h1 {
       width: fit-content;
       color: transparent;
-      background: linear-gradient(to right, rgb(162, 0, 255), rgb(255, 0, 98));
+      background: linear-gradient(to right, #ff0080, #8e2de2);
       -webkit-background-clip: text;
+      animation: colorChange 5s ease-in-out infinite;
       cursor: pointer;
       padding: 4px;
       position: relative;
+    }
+
+    @keyframes colorChange {
+      0% {
+        background: linear-gradient(to right, #ff0080, #8e2de2);
+        -webkit-background-clip: text;
+      }
+
+      25% {
+        background: linear-gradient(to right, #8e2de2, #4a00e0);
+        -webkit-background-clip: text;
+      }
+
+      50% {
+        background: linear-gradient(to right, #4a00e0, #00c6ff);
+        -webkit-background-clip: text;
+      }
+
+      75% {
+        background: linear-gradient(to right, #00c6ff, #f77062);
+        -webkit-background-clip: text;
+      }
+
+      100% {
+        background: linear-gradient(to right, #ff0080, #8e2de2);
+        -webkit-background-clip: text;
+      }
     }
 
     .logo h1:before {
@@ -101,7 +129,7 @@
     }
 
     .signin {
-      display: flex;
+      display: none;
     }
 
     .signin ul {
@@ -166,6 +194,91 @@
     .show-dropdown {
       display: block !important;
     }
+
+    .btn {
+      width: 40px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: transparent;
+      outline: none;
+      border: none;
+      gap: 4px;
+      padding: 3px;
+      margin: 10px;
+    }
+
+    .btn span {
+      border-radius: 25px;
+      width: 100%;
+      background-color: #ff0080;
+      height: 3px;
+    }
+
+    .sidenavbar {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 250px;
+      position: absolute;
+      top: 80px;
+      height: 100vh;
+      background-color: rgb(40, 40, 40);
+      box-shadow: 0 0 10px 1px rgb(241, 241, 241);
+    }
+
+    .close {
+      width: 100%;
+      display: flex;
+      margin-right: 10px;
+      cursor: pointer;
+      justify-content: flex-end;
+      font-size: 20px;
+      color: red;
+      padding: 5px;
+    }
+
+    .sidenavbar ul {
+      margin-top: 10px;
+      width: 100%;
+      display: flex;
+      padding: 10px;
+      gap: 8px;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .sidenavbar ul li {
+      list-style-type: none;
+      width: 100%;
+      padding: 10px;
+      position: relative;
+    }
+
+    .sidenavbar ul li a {
+      color: white;
+      width: 100%;
+      text-decoration: none;
+    }
+
+    .sidenavbar ul li:hover {
+      background-color: white;
+      cursor: pointer;
+    }
+
+    .sidenavbar ul li:hover a {
+      color: black;
+    }
+
+    /* Position dropdown correctly inside sidenav */
+    .sidenavbar .more-movies--1 {
+      position: static;
+      background-color: white;
+      box-shadow: none;
+      padding-left: 10px;
+    }
   </style>
 </head>
 
@@ -174,6 +287,7 @@
     <div class="logo">
       <h1>MovieTime</h1>
     </div>
+
     <div class="navbar">
       <ul>
         <li><a href="#">HOME</a></li>
@@ -194,29 +308,79 @@
           </div>
         </li>
         <li><a href="#">LIVE TV</a></li>
-        <li><a href="#">MORE</a></li>
       </ul>
     </div>
+
     <div class="signin">
       <ul>
         <li id="search"><a href="#"><i class="fa-solid fa-magnifying-glass"></i>SEARCH</a></li>
         <li><a href="#">SIGN IN</a></li>
       </ul>
     </div>
+
+    <div id="sidebar">
+      <button class="btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div class="sidenavbar">
+      <p class="close">X</p>
+      <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">SERIES</a></li>
+        <li class="more-movies">
+          <a href="#" id="side-movies-link">MOVIES</a>
+          <div class="more-movies--1" id="side-movies-dropdown">
+            <ul>
+              <li><a href="#">New movies</a></li>
+              <li><a href="#">Survival Films</a></li>
+              <li><a href="#">Romantic Movies</a></li>
+              <li><a href="#">Horror Movies</a></li>
+              <li><a href="#">Made in Korea</a></li>
+              <li><a href="#">Must Watch Movies</a></li>
+              <li><a href="#">International Actions</a></li>
+              <li><a href="#">Superhero Movies</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="#">LIVE TV</a></li>
+        <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i>SEARCH</a></li>
+        <li><a href="#">SIGN IN</a></li>
+      </ul>
+    </div>
   </section>
 
   <script>
+    // Main navbar dropdown
     const moviesLink = document.getElementById("movies-link");
     const dropdown = document.getElementById("movies-dropdown");
 
     moviesLink.addEventListener("click", (e) => {
-      e.preventDefault(); 
+      e.preventDefault();
       dropdown.classList.toggle("show-dropdown");
     });
 
     document.addEventListener("click", (e) => {
       if (!e.target.closest(".more-movies")) {
         dropdown.classList.remove("show-dropdown");
+      }
+    });
+
+    // Side navbar dropdown
+    const sideMoviesLink = document.getElementById("side-movies-link");
+    const sideMoviesDropdown = document.getElementById("side-movies-dropdown");
+
+    sideMoviesLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      sideMoviesDropdown.classList.toggle("show-dropdown");
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!e.target.closest(".sidenavbar .more-movies")) {
+        sideMoviesDropdown.classList.remove("show-dropdown");
       }
     });
   </script>
