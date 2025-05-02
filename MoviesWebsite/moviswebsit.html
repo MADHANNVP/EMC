@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NOSTRA</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    
+
     <style>
         * {
             padding: 0;
@@ -71,45 +75,69 @@
             color: white;
         }
 
-        /* section 2 */
+        /* section 3 */
 
-        .sliders {
-            height: 500px;
-        }
+        #section--3 {
+      width: 100vw;
+      height: 400px;
+      overflow: hidden;
+      position: relative;
+    }
 
-        .slider {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            overflow: hidden;
-        }
+    .sliders {
+      display: flex;
+      width: 300vw; 
+      height: 100%;
+      transition: transform 1s ease-in-out;
+    }
 
-        .slider::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.6); 
-            z-index: 2;
-        }
+    .slider {
+      flex: 0 0 100vw;
+      height: 100%;
+      position: relative;
+    }
 
-        .slider img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            position: relative;
-            z-index: 1;
-        }
+    .slider::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
 
-        .active {
-            display: block;
-        }
+    .slider img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-        .hidden {
-            display: none;
-        }
+    .btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 40px;
+      background: transparent;
+      border: none;
+      color: rgba(255, 255, 255, 0.7);
+      cursor: pointer;
+      padding: 20px;
+      z-index: 10;
+    }
+
+    .left-btn {
+      left: 0;
+    }
+
+    .right-btn {
+      right: 0;
+    }
+
+    .btn:active {
+      color: white;
+    }
     </style>
 </head>
 
@@ -130,27 +158,61 @@
         </div>
     </section>
 
-    <!-- section 2 -->
+    <!-- section 3 -->
 
-    <section id="section--2">
-        <div class="sliders">
-            <div class="slider active">
-                <img src="image/Dragon.jpg" alt="Dragon" title="Dragon">
-            </div>
-            <div class="slider hidden">
-                <img src="image/2.jpg" alt="Nilavuku en mel ennadi kobam" title="nilavuku en mel ennadi kobam">
-            </div>
-            <div class="slider hidden">
-                <img src="image/3.jpg" alt="Retro" title="Retro">
-            </div>
+    <section id="section--3">
+        <div class="sliders" id="sliderContainer">
+          <div class="slider">
+            <img src="image/Dragon.jpg" alt="Dragon" />
+          </div>
+          <div class="slider">
+            <img src="image/2.jpg" alt="Nilavuku en mel ennadi kobam" />
+          </div>
+          <div class="slider">
+            <img src="image/3.jpg" alt="Retro" />
+          </div>
         </div>
-    </section>
+        <button class="btn left-btn">&#10094;</button>
+        <button class="btn right-btn">&#10095;</button>
+      </section>
+
+
 
     <script>
+
+        // section 1
         let offerbar = document.querySelector(".offerbar--close");
         offerbar.addEventListener("click", function () {
-            offerbar.parentElement.parentElement.parentElement.remove();
+            offerbar.parentElement.parentElement.remove();
         });
+
+
+        // section 3
+        const sliderContainer = document.getElementById("sliderContainer");
+    const leftBtn = document.querySelector(".left-btn");
+    const rightBtn = document.querySelector(".right-btn");
+    const totalSlides = document.querySelectorAll(".slider").length;
+
+    let index = 0;
+
+    function updateSlidePosition() {
+      sliderContainer.style.transform = `translateX(-${index * 100}vw)`;
+    }
+
+    leftBtn.addEventListener("click", () => {
+      index = (index - 1 + totalSlides) % totalSlides;
+      updateSlidePosition();
+    });
+
+    rightBtn.addEventListener("click", () => {
+      index = (index + 1) % totalSlides;
+      updateSlidePosition();
+    });
+
+    setInterval(() => {
+      index = (index + 1) % totalSlides;
+      updateSlidePosition();
+    }, 5000);
     </script>
 
 </body>

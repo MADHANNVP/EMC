@@ -1,108 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sliding Carousel</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
 
-    <style>
-        *{
-            padding:0;
-            margin:0;
-            box-sizing:border-box;
-        }
+    #section--2 {
+      width: 100vw;
+      height: 400px;
+      overflow: hidden;
+      position: relative;
+    }
 
-        #section--2{
-            width:100vw;
-            height:400px;
-            overflow: hidden;
-        }
+    .sliders {
+      display: flex;
+      width: 300vw; 
+      height: 100%;
+      transition: transform 1s ease-in-out;
+    }
 
-        .sliders{
-            width:300%;
-            height:100%;
-            display:flex;
-            position:relative;
-        }
-        .slider{
-            width:100%;
-            height:100%;
-            z-index:1;
-            position:relative;
-        }
-        .slider::before{
-            content: " ";
-            top:0;
-            left:0;
-            width:100%;
-            height:100%;
-            background:rgba(0,0,0,0.6);
-            z-index:2;
-            position:absolute;
+    .slider {
+      flex: 0 0 100vw;
+      height: 100%;
+      position: relative;
+    }
 
-        }
+    .slider::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
 
-        .slider img{
-            width:100%;
-            height:100%;
-        }
+    .slider img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-        .left-btn{
-          position:absolute;
-          top:50%;
-          left:0;
-          font-size:50px;
-          transform:translateY(-50%);
-          background-color: transparent;
-          outline:none;
-          border:none;
-          color:rgb(240, 240, 240,0.8);
-          cursor:pointer;
-          padding:20px;
-          z-index:3;
-        }
+    .btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 40px;
+      background: transparent;
+      border: none;
+      color: rgba(255, 255, 255, 0.7);
+      cursor: pointer;
+      padding: 20px;
+      z-index: 10;
+    }
 
-        .right-btn{
-          position:absolute;
-          top:50%;
-          right:0;
-          font-size:50px;
-          transform:translateY(-50%);
-          background-color: transparent;
-          outline:none;
-          border:none;
-          color:rgb(240, 240, 240,0.8);
-          cursor:pointer;
-          padding:20px;
-          z-index:3;
-        }
+    .left-btn {
+      left: 0;
+    }
 
-    </style>
+    .right-btn {
+      right: 0;
+    }
+
+    .btn:active {
+      color: white;
+    }
+  </style>
 </head>
 <body>
-    
-    <section id="section--2">
-        <div class="sliders">
-            <div class="slider active">
-                <img src="image/Dragon.jpg" alt="Dragon" title="Dragon">
-            </div>
-            <div class="slider hidden">
-                <img src="image/2.jpg" alt="Nilavuku en mel ennadi kobam" title="nilavuku en mel ennadi kobam">
-            </div>
-            <div class="slider hidden">
-                <img src="image/3.jpg" alt="Retro" title="Retro">
-            </div>
-            <button class="btn left-btn">&#10094;</button>
-            <button class="btn rignt-btn">&#10095;</button>
-        </div>
-    </section>
 
-    <script>
-     let imageindex = 0;
-     const slider = document.querySelectorAll(".slider");
+  <section id="section--2">
+    <div class="sliders" id="sliderContainer">
+      <div class="slider">
+        <img src="image/Dragon.jpg" alt="Dragon" />
+      </div>
+      <div class="slider">
+        <img src="image/2.jpg" alt="Nilavuku en mel ennadi kobam" />
+      </div>
+      <div class="slider">
+        <img src="image/3.jpg" alt="Retro" />
+      </div>
+    </div>
+    <button class="btn left-btn">&#10094;</button>
+    <button class="btn right-btn">&#10095;</button>
+  </section>
 
-    </script>
+  <script>
+    const sliderContainer = document.getElementById("sliderContainer");
+    const leftBtn = document.querySelector(".left-btn");
+    const rightBtn = document.querySelector(".right-btn");
+    const totalSlides = document.querySelectorAll(".slider").length;
 
+    let index = 0;
+
+    function updateSlidePosition() {
+      sliderContainer.style.transform = `translateX(-${index * 100}vw)`;
+    }
+
+    leftBtn.addEventListener("click", () => {
+      index = (index - 1 + totalSlides) % totalSlides;
+      updateSlidePosition();
+    });
+
+    rightBtn.addEventListener("click", () => {
+      index = (index + 1) % totalSlides;
+      updateSlidePosition();
+    });
+
+    setInterval(() => {
+      index = (index + 1) % totalSlides;
+      updateSlidePosition();
+    }, 7000);
+  </script>
 
 </body>
 </html>
