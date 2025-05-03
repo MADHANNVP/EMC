@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Movie Scroll</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    .box img {
+      width: 170px;
+      height: 200px;
+    }
+
+    .box {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      width: fit-content;
+      border: 1px solid red;
+    }
+
+    .movie-name {
+      font-size: 16px;
+    }
+
+    .container {
+      display: flex;
+      width: 100%;
+      overflow-x: scroll;
+      gap: 10px;
+      scrollbar-width: none; /* Firefox */
+    }
+
+    .container::-webkit-scrollbar {
+      display: none; /* Chrome, Safari */
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="scroll-container">
+    <div class="box"><img src="NEW MOVIES/DRAGON.jpg" alt="DRAGON"><h1 class="movie-name">DRAGON</h1></div>
+    <div class="box"><img src="NEW MOVIES/fight or flight.jpg" alt="FIGHT OR FLIGHT"><h1 class="movie-name">FIGHT OR FLIGHT</h1></div>
+    <div class="box"><img src="NEW MOVIES/HEART EYES.jpg" alt="HEART EYES"><h1 class="movie-name">HEART EYES</h1></div>
+    <div class="box"><img src="NEW MOVIES/Kudumbasthan.jpg" alt="KUDUMBASTHAN"><h1 class="movie-name">KUDUMBASTHAN</h1></div>
+    <div class="box"><img src="NEW MOVIES/Nilavuku-En-Mel-Ennadi-Kobam.jpg" alt="NULAVUKU-EN-MEL-ENNADI-KOBAM"><h1 class="movie-name">NULAVUKU-EN-MEL-ENNADI-KOBAM</h1></div>
+    <div class="box"><img src="NEW MOVIES/OCTOMBER 8.jpg" alt="OCTOMBER 8"><h1 class="movie-name">OCTOMBER 8</h1></div>
+    <div class="box"><img src="NEW MOVIES/Paddington in Peru.jpg" alt="PADDINGTON IN PERU"><h1 class="movie-name">PADDINGTON IN PERU</h1></div>
+    <div class="box"><img src="NEW MOVIES/RETRO.jpg" alt="RETRO"><h1 class="movie-name">RETRO</h1></div>
+    <div class="box"><img src="NEW MOVIES/WOLF MAN.jpg" alt="WOLF MAN"><h1 class="movie-name">WOLF MAN</h1></div>
+    <div class="box"><img src="NEW MOVIES/PRAVINKOODU SHAPPU.jpg" alt="PRAVINKOODU SHAPPU"><h1 class="movie-name">PRAVINKOODU SHAPPU</h1></div>
+  </div>
+
+  <script>
+    const container = document.getElementById('scroll-container');
+    container.addEventListener('wheel', function (e) {
+      e.preventDefault();
+      container.scrollLeft += e.deltaY;
+    });
+  </script>
+</body>
+</html>

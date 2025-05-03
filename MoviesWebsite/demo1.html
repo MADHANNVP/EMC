@@ -27,7 +27,7 @@
 
     .navbar {
       width: 40%;
-      display: none;
+      display: flex;
       justify-content: space-evenly;
       align-items: center;
     }
@@ -129,7 +129,7 @@
     }
 
     .signin {
-      display: none;
+      display:block;
     }
 
     .signin ul {
@@ -153,7 +153,11 @@
 
     #search a {
       background-color: white;
-      padding: 10px 80px;
+      padding: 10px 40px;
+    }
+
+    .navbar ul li.more-movies:hover .more-movies--1 {
+      display: block;
     }
 
     .more-movies--1 {
@@ -181,6 +185,7 @@
       background-color: rgb(32, 32, 32);
       color: white;
     }
+  
 
     .more-movies--1 ul li a {
       color: black;
@@ -208,6 +213,7 @@
       gap: 4px;
       padding: 3px;
       margin: 10px;
+      cursor:pointer;
     }
 
     .btn span {
@@ -222,14 +228,16 @@
       align-items: center;
       flex-direction: column;
       width: 250px;
+      left:-300px;
       position: absolute;
       top: 80px;
       height: 100vh;
       background-color: rgb(40, 40, 40);
       box-shadow: 0 0 10px 1px rgb(241, 241, 241);
+      transition:all 1s ease-in-out;
     }
-
-    .close {
+    
+    #close {
       width: 100%;
       display: flex;
       margin-right: 10px;
@@ -262,22 +270,53 @@
       width: 100%;
       text-decoration: none;
     }
-
+    
     .sidenavbar ul li:hover {
       background-color: white;
       cursor: pointer;
     }
-
+    
     .sidenavbar ul li:hover a {
       color: black;
     }
-
-    /* Position dropdown correctly inside sidenav */
+    
     .sidenavbar .more-movies--1 {
-      position: static;
-      background-color: white;
-      box-shadow: none;
-      padding-left: 10px;
+      position: relative;
+      top: 0;
+      background-color: rgb(55, 55, 55);
+    }
+    
+    .goleft{
+      left:0px;
+      transition:all 1s ease-in-out;
+    }
+
+    .more-movies--1 ul li a{
+      color:black;
+    }
+
+    #sidebar{
+      display:none;
+    }
+
+    @media (max-width:767px)
+    {
+      .navbar{
+        display:none;
+      }
+      #sidebar{
+        display: block;
+      }
+      .signin{
+        display:none;
+      }
+    }
+
+    @media (min-width:1000px)
+    {
+      #search a{
+        padding:10px 80px;
+      }
     }
   </style>
 </head>
@@ -287,14 +326,13 @@
     <div class="logo">
       <h1>MovieTime</h1>
     </div>
-
     <div class="navbar">
       <ul>
         <li><a href="#">HOME</a></li>
         <li><a href="#">SERIES</a></li>
-        <li class="more-movies">
-          <a href="#" id="movies-link">MOVIES</a>
-          <div class="more-movies--1" id="movies-dropdown">
+        <li class="more-movies" id="side-movies">
+          <a href="#">MOVIES</a>
+          <div class="more-movies--1" id="side-dropdown">
             <ul>
               <li><a href="#">New movies</a></li>
               <li><a href="#">Survival Films</a></li>
@@ -310,7 +348,6 @@
         <li><a href="#">LIVE TV</a></li>
       </ul>
     </div>
-
     <div class="signin">
       <ul>
         <li id="search"><a href="#"><i class="fa-solid fa-magnifying-glass"></i>SEARCH</a></li>
@@ -325,15 +362,16 @@
         <span></span>
       </button>
     </div>
-
+  </section>
+  <section>
     <div class="sidenavbar">
-      <p class="close">X</p>
+      <p id="close">X</p>
       <ul>
         <li><a href="#">HOME</a></li>
         <li><a href="#">SERIES</a></li>
-        <li class="more-movies">
-          <a href="#" id="side-movies-link">MOVIES</a>
-          <div class="more-movies--1" id="side-movies-dropdown">
+        <li class="more-movies sidenav-movies">
+          <a href="#">MOVIES</a>
+          <div class="more-movies--1 sidenav-dropdown">
             <ul>
               <li><a href="#">New movies</a></li>
               <li><a href="#">Survival Films</a></li>
@@ -347,42 +385,51 @@
           </div>
         </li>
         <li><a href="#">LIVE TV</a></li>
-        <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i>SEARCH</a></li>
+        <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i> &nbspSEARCH</a></li>
         <li><a href="#">SIGN IN</a></li>
       </ul>
     </div>
   </section>
 
   <script>
-    // Main navbar dropdown
-    const moviesLink = document.getElementById("movies-link");
-    const dropdown = document.getElementById("movies-dropdown");
+    const sideMovies = document.getElementById("side-movies");
+    const sideDropdown = document.getElementById("side-dropdown");
 
-    moviesLink.addEventListener("click", (e) => {
-      e.preventDefault();
-      dropdown.classList.toggle("show-dropdown");
+    sideMovies.addEventListener("click", function (e) {
+      e.stopPropagation();
+      sideDropdown.classList.toggle("show-dropdown");
     });
 
-    document.addEventListener("click", (e) => {
-      if (!e.target.closest(".more-movies")) {
-        dropdown.classList.remove("show-dropdown");
+    document.addEventListener("click", function (e) {
+      if (!e.target.closest("#side-movies")) {
+        sideDropdown.classList.remove("show-dropdown");
       }
     });
 
-    // Side navbar dropdown
-    const sideMoviesLink = document.getElementById("side-movies-link");
-    const sideMoviesDropdown = document.getElementById("side-movies-dropdown");
+    const sidenavMovies = document.querySelector(".sidenav-movies");
+const sidenavDropdown = document.querySelector(".sidenav-dropdown");
 
-    sideMoviesLink.addEventListener("click", (e) => {
-      e.preventDefault();
-      sideMoviesDropdown.classList.toggle("show-dropdown");
-    });
+sidenavMovies.addEventListener("click", function (e) {
+  e.stopPropagation();
+  sidenavDropdown.classList.toggle("show-dropdown");
+});
 
-    document.addEventListener("click", (e) => {
-      if (!e.target.closest(".sidenavbar .more-movies")) {
-        sideMoviesDropdown.classList.remove("show-dropdown");
-      }
-    });
+document.addEventListener("click", function (e) {
+  if (!e.target.closest(".sidenav-movies")) {
+    sidenavDropdown.classList.remove("show-dropdown");
+  }
+});
+
+
+const barbtn = document.querySelector(".btn");
+    const close = document.getElementById("close");
+    const sidenavbar = document.querySelector(".sidenavbar");
+    barbtn.addEventListener("click",function(){
+      sidenavbar.classList.add("goleft");
+    })
+    close.addEventListener("click",function(event){
+      sidenavbar.classList.remove("goleft");
+    })
   </script>
 </body>
 
