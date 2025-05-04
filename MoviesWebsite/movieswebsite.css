@@ -203,8 +203,11 @@ text-decoration: none;
 border-radius: 10px;
 }
 
+#search{
+    background-color: red;
+    z-index: 100000000000;
+}
 #search a {
-background-color: white;
 padding: 10px 40px;
 }
 
@@ -470,3 +473,587 @@ right: 0;
 .slider-btn:active {
 color: white;
 }
+
+
+
+  body {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Section 1 - Offer Bar */
+  #offerbar {
+    animation: toptobottum 0.3s ease-in-out;
+  }
+
+  @keyframes toptobottum {
+    0% {
+      height: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      height: 40px;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes zome {
+    0% {
+      transform: scale(0.8);
+    }
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0.8);
+    }
+  }
+
+  .offerbar--descrpe {
+    height: 40px;
+    background-color: rgb(32, 32, 32);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+  }
+
+  .offerbar--offer {
+    margin-right: 20px;
+    cursor: context-menu;
+  }
+
+  .offerbar--close {
+    margin-left: 20px;
+    cursor: pointer;
+    color: red;
+    animation: zome 1s infinite linear;
+  }
+
+  .offerbar--offer p a {
+    color: white;
+    text-decoration: none;
+  }
+
+  /* Section 2 - Navigation */
+  #section--2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    margin: 20px;
+  }
+
+  .logo h1 {
+    width: fit-content;
+    color: transparent;
+    background: linear-gradient(to right, #ff0080, #8e2de2);
+    -webkit-background-clip: text;
+    animation: colorChange 5s ease-in-out infinite;
+    cursor: pointer;
+    padding: 4px;
+    position: relative;
+  }
+
+  @keyframes colorChange {
+    0% {
+      background: linear-gradient(to right, #ff0080, #8e2de2);
+      -webkit-background-clip: text;
+    }
+    25% {
+      background: linear-gradient(to right, #8e2de2, #4a00e0);
+      -webkit-background-clip: text;
+    }
+    50% {
+      background: linear-gradient(to right, #4a00e0, #00c6ff);
+      -webkit-background-clip: text;
+    }
+    75% {
+      background: linear-gradient(to right, #00c6ff, #f77062);
+      -webkit-background-clip: text;
+    }
+    100% {
+      background: linear-gradient(to right, #ff0080, #8e2de2);
+      -webkit-background-clip: text;
+    }
+  }
+
+  .logo h1:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    transform: scale(0);
+    transition: 0.4s;
+    background: linear-gradient(to right, rgb(162, 0, 255), rgb(255, 0, 98), rgb(240, 240, 240));
+  }
+
+  .logo h1:hover::before {
+    transform: scale(1);
+  }
+
+  .navbar {
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .navbar ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 8px;
+  }
+
+  .navbar ul li {
+    list-style-type: none;
+    position: relative;
+  }
+
+  .navbar ul li a {
+    color: transparent;
+    width: fit-content;
+    position: relative;
+    padding: 5px;
+    background-image: linear-gradient(180deg, rgb(244, 0, 98), rgb(255, 0, 98));
+    -webkit-background-clip: text;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .navbar ul li a:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    transform: scale(0);
+    transition: 0.4s;
+    background-image: linear-gradient(180deg, white, white);
+  }
+
+  .navbar ul li a:hover::before {
+    transform: scale(1);
+  }
+
+  .signin {
+    display: block;
+  }
+
+  .signin ul {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .signin ul li {
+    list-style-type: none;
+    padding: 10px;
+  }
+
+  .signin ul li a {
+    padding: 10px;
+    background-color: white;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border-radius: 10px;
+  }
+
+  #search a {
+    background-color: white;
+    padding: 10px 40px;
+  }
+
+  .navbar ul li.more-movies:hover .more-movies--1 {
+    display: block;
+  }
+
+  .more-movies--1 {
+    display: none;
+    position: absolute;
+    width: 200px;
+    top: 40px;
+    left: 0;
+    background-color: white;
+    z-index: 100;
+  }
+
+  .more-movies--1 ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .more-movies--1 ul li {
+    padding: 10px;
+    background-color: aliceblue;
+    border: 1px solid white;
+  }
+
+  .more-movies--1 ul li:hover {
+    background-color: rgb(32, 32, 32);
+    color: white;
+  }
+
+  .more-movies--1 ul li a {
+    color: black;
+    text-decoration: none;
+    background-image: none;
+    -webkit-background-clip: initial;
+  }
+
+  .more-movies--1 ul li:hover a {
+    color: white;
+  }
+
+  .show-dropdown {
+    display: block !important;
+  }
+
+  /* Mobile Menu */
+  #sidebarrr {
+    display: none;
+    margin-right: 10px;
+    z-index: 1000;
+  }
+
+  .btn {
+    width: 40px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    gap: 4px;
+    padding: 3px;
+    margin: 10px;
+    cursor: pointer;
+  }
+
+  .btn span {
+    border-radius: 25px;
+    width: 100%;
+    background-color: #ff0080;
+    height: 3px;
+  }
+
+  .sidenavbar {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 250px;
+    left: -300px;
+    position: absolute;
+    top: 80px;
+    height: 100vh;
+    background-color: rgb(40, 40, 40);
+    box-shadow: 0 0 10px 1px rgb(241, 241, 241);
+    transition: all 1s ease-in-out;
+    z-index: 1000;
+  }
+
+  #close {
+    width: 100%;
+    display: flex;
+    margin-right: 10px;
+    cursor: pointer;
+    justify-content: flex-end;
+    font-size: 20px;
+    color: red;
+    padding: 5px;
+  }
+
+  .sidenavbar ul {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    gap: 8px;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .sidenavbar ul li {
+    list-style-type: none;
+    width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .sidenavbar ul li a {
+    color: white;
+    width: 100%;
+    text-decoration: none;
+  }
+
+  .sidenavbar ul li:hover {
+    background-color: white;
+    cursor: pointer;
+  }
+
+  .sidenavbar ul li:hover a {
+    color: black;
+  }
+
+  .sidenavbar .more-movies--1 {
+    position: relative;
+    top: 0;
+    background-color: rgb(55, 55, 55);
+  }
+
+  .goleft {
+    left: 0px;
+    transition: all 1s ease-in-out;
+  }
+
+  .more-movies--1 ul li a {
+    color: black;
+  }
+
+  @media (max-width: 767px) {
+    .navbar {
+      display: none;
+    }
+    #sidebarrr {
+      display: block;
+    }
+    .signin {
+      display: none;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    #search a {
+      padding: 10px 80px;
+    }
+  }
+
+  /* Section 3 - Slider */
+  #section--3 {
+    width: 100vw;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .sliders {
+    display: flex;
+    width: 300vw;
+    height: 100%;
+    transition: transform 1s ease-in-out;
+  }
+
+  .slider {
+    flex: 0 0 100vw;
+    height: 100%;
+    position: relative;
+  }
+
+  .slider::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+  }
+
+  .slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    padding: 20px;
+    z-index: 10;
+  }
+
+  .left-btn {
+    left: 0;
+  }
+
+  .right-btn {
+    right: 0;
+  }
+
+  .slider-btn:active {
+    color: white;
+  }
+
+  /* Section 4 - New Movies */
+  #section--4 {
+    margin-bottom: 20px;
+    margin-top: 100px;
+    padding: 10px;
+  }
+
+  #section--4 h2 {
+    margin-bottom: 20px;
+    padding-left: 10px;
+  }
+
+  #new-movies {
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    gap: 10px;
+    scrollbar-width: none;
+    padding: 10px;
+  }
+
+  #new-movies::-webkit-scrollbar {
+    display: none;
+  }
+
+  .box {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 275px;
+    width: 170px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    position: relative;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+    background-color: rgba(32, 32, 32, 0.8);
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .box:hover {
+    transform: scale(1);
+    cursor: pointer;
+    border-color: rgba(255, 0, 98, 0.8);
+    box-shadow: 0 0 5px 2PX rgba(255, 0, 98, 0.5);
+  }
+
+  .box img {
+    width: 100%;
+    height: 200px;
+    border-radius: 4px 4px 0 0;
+  }
+
+  .movie-name {
+    font-size: 16px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 45px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .box .ott {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    z-index: 2;
+  }
+
+  .watch {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    padding: 5px;
+  }
+
+  .watch button {
+    height: 30px;
+    width: 80%;
+    border: none;
+    outline: none;
+    background-color: rgb(255, 0, 98);
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+
+  .watch button:hover {
+    background-color: rgb(220, 0, 80);
+  }
+
+  .movie-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+  }
+
+  #search a:hover{
+    border:2px solid pink;
+
+  }
+  #search a{
+    border:2px solid transparent;
+    border-radius:10px;
+  }
+  #signin:hover{
+    border:2px solid pink;
+
+  }
+  #signin{
+    border:2px solid transparent;
+    border-radius:10px;
+  }
+   
+
+
+  /* section 5 */
+  #section--5 {
+    margin-bottom: 20px;
+    margin-top: 100px;
+    padding: 10px;
+  }
+
+  #section--5 h2 {
+    margin-bottom: 20px;
+    padding-left: 10px;
+  }
+
+  #TOP-series {
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    gap: 10px;
+    scrollbar-width: none;
+    padding: 10px;
+  }
+
+  #TOP-series::-webkit-scrollbar {
+    display: none;
+  }
