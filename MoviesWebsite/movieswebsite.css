@@ -204,8 +204,7 @@ border-radius: 10px;
 }
 
 #search{
-    background-color: red;
-    z-index: 100000000000;
+    z-index: 100;
 }
 #search a {
 padding: 10px 40px;
@@ -908,7 +907,7 @@ color: white;
   /* Section 4 - New Movies */
   #section--4 {
     margin-bottom: 20px;
-    margin-top: 100px;
+    margin-top: 20px;
     padding: 10px;
   }
 
@@ -1036,7 +1035,7 @@ color: white;
   /* section 5 */
   #section--5 {
     margin-bottom: 20px;
-    margin-top: 100px;
+    margin-top: 20px;
     padding: 10px;
   }
 

@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEARCH</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #search-div {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 40px;
+            padding: 3px;
+        }
+
+        input {
+            padding: 10px;
+            border-radius: 25px;
+            border: 1px solid red;
+            box-shadow: rgba(255, 0, 0) 0 0 5px;
+            outline: none;
+            width: 80%;
+            background-color: white;
+            color: white;
+        }
+
+        input:active,
+        input:focus {
+            box-shadow: rgba(255, 0, 0) 0 0 15px;
+        }
+
+        #container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 15px;
+            width: 90%;
+            height: 100%;
+            border: 1px solid red;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: rgba(255, 0, 0) 0 0 5px;
+            scrollbar-width: none;
+            overflow-y: scroll;
+        }
+
+        #container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .box {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            flex-shrink: 0;
+            height: 275px;
+            width: 170px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+            position: relative;
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+            background-color: rgba(32, 32, 32, 0.8);
+            overflow: hidden;
+            flex-shrink: 0;
+            margin: 10px;
+        }
+
+        .box:hover {
+            transform: scale(1);
+            cursor: pointer;
+            border-color: rgba(255, 0, 98, 0.8);
+            box-shadow: 0 0 5px 2PX rgba(255, 0, 98, 0.5);
+        }
+
+        .box img {
+            width: 100%;
+            height: 200px;
+            border-radius: 4px 4px 0 0;
+            object-fit: cover;
+        }
+
+        .movie-name {
+            font-size: 16px;
+            padding: 5px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 45px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            color: white;
+        }
+
+        .box .ott {
+            width: 18px;
+            height: 18px;
+            position: absolute;
+            right: 3px;
+            top: 3px;
+            z-index: 2;
+        }
+
+        .watch {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            bottom: 0;
+            padding: 5px;
+        }
+
+        .watch button {
+            height: 30px;
+            width: 80%;
+            border: none;
+            outline: none;
+            background-color: rgb(255, 0, 98);
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .watch button:hover {
+            background-color: rgb(220, 0, 80);
+        }
+
+        .movie-link {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="search-div">
+        <input type="text" placeholder="Search" id="search">
+    </div>
+    <div id="container">
+        <a href="https://www.netflix.com/in/title/81762715" target="_blank" class="movie-link" title="BREAKING BAD">
+            <div class="box">
+                <img src="TOP SERIES/BREAKING BAD.jpg" alt="BREAKING BAD">
+                <h1 class="movie-name">BREAKING BAD</h1>
+                <img class="ott" src="OTT IMAGE/NETFLIX.png" alt="Netflix" title="NETFLIX">
+                <div class="watch">
+                    <button>Watch Now</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.netflix.com/in/title/81762715" target="_blank" class="movie-link" title="ARROW">
+            <div class="box">
+                <img src="TOP SERIES/ARROW.jpg" alt="ARROW">
+                <h1 class="movie-name">ARROW</h1>
+                <img class="ott" src="OTT IMAGE/Amazon-Prime.png" alt="Amazon-Prime" title="Amazon-Prime">
+                <div class="watch">
+                    <button>Watch Now</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.netflix.com/in/title/81762715" target="_blank" class="movie-link" title="WENDNESDAY">
+            <div class="box">
+                <img src="TOP SERIES/WENDNESDAY.jpg" alt="WENDNESDAY">
+                <h1 class="movie-name">WENDNESDAY</h1>
+                <img class="ott" src="OTT IMAGE/NETFLIX.png" alt="Netflix" title="NETFLIX">
+                <div class="watch">
+                    <button>Watch Now</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.netflix.com/in/title/81762715" target="_blank" class="movie-link" title="INSPECTOR RISHI">
+            <div class="box">
+                <img src="TOP SERIES/INSPECTOR RISHI.jpg" alt="INSPECTOR RISHI">
+                <h1 class="movie-name">INSPECTOR RISHI</h1>
+                <img class="ott" src="OTT IMAGE/Amazon-Prime.png" alt="Amazon-Prime" title="Amazon-Prime">
+                <div class="watch">
+                    <button>Watch Now</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.netflix.com/in/title/81762715" target="_blank" class="movie-link" title="BERRER CALL SAUL">
+            <div class="box">
+                <img src="TOP SERIES/BERRER CALL SAUL.jpg" alt="BERRER CALL SAUL">
+                <h1 class="movie-name">BERRER CALL SAUL</h1>
+                <img class="ott" src="OTT IMAGE/NETFLIX.png" alt="Netflix" title="NETFLIX">
+                <div class="watch">
+                    <button>Watch Now</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.netflix.com/in/title/81762715" target="_blank" class="movie-link" title="THE BOYS">
+            <div class="box">
+                <img src="TOP SERIES/THE BOYS.jpg" alt="THE BOYS">
+                <h1 class="movie-name">THE BOYS</h1>
+                <img class="ott" src="OTT IMAGE/Amazon-Prime.png" alt="Amazon-Prime" title="Amazon-Prime">
+                <div class="watch">
+                    <button>Watch Now</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.netflix.com/in/title/81762715" target="_blank" class="movie-link" title="ONE PIECE">
+            <div class="box">
+                <img src="TOP SERIES/ONE PIECE.jpg" alt="ONE PIECE">
+                <h1 class="movie-name">ONE PIECE</h1>
+                <img class="ott" src="OTT IMAGE/NETFLIX.png" alt="Netflix" title="NETFLIX">
+                <div class="watch">
+                    <button>Watch Now</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.netflix.com/in/title/81762715" target="_blank" class="movie-link" title="DARK">
+            <div class="box">
+                <img src="TOP SERIES/DARK.jpg" alt="DARK">
+                <h1 class="movie-name">DARK</h1>
+                <img class="ott" src="OTT IMAGE/NETFLIX.png" alt="Netflix" title="NETFLIX">
+                <div class="watch">
+                    <button>Watch Now</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.netflix.com/in/title/81762715" target="_blank" class="movie-link" title="STARNGER THINGS">
+            <div class="box">
+                <img src="TOP SERIES/STRANGER THINGS.jpg" alt="STARNGER THINGS">
+                <h1 class="movie-name">STARNGER THINGS</h1>
+                <img class="ott" src="OTT IMAGE/NETFLIX.png" alt="Netflix" title="NETFLIX">
+                <div class="watch">
+                    <button>Watch Now</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.netflix.com/in/title/81762715" target="_blank" class="movie-link" title="MOON KNIGHT">
+            <div class="box">
+                <img src="TOP SERIES/MOON KNIGHT.jpg" alt="MOON KNIGHT">
+                <h1 class="movie-name">MOON KNIGHT</h1>
+                <img class="ott" src="OTT IMAGE/jio hoster.jpeg" alt="JIO HOSTER" title="JIO HOSTER">
+                <div class="watch">
+                    <button>Watch Now</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.netflix.com/in/title/81762715" target="_blank" class="movie-link" title="LOKI">
+            <div class="box">
+                <img src="TOP SERIES/LOKI.jpg" alt="LOKI">
+                <h1 class="movie-name">LOKI</h1>
+                <img class="ott" src="OTT IMAGE/jio hoster.jpeg" alt="JIO HOSTER" title="JIO HOSTER">
+                <div class="watch">
+                    <button>Watch Now</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.netflix.com/in/title/81762715" target="_blank" class="movie-link" title="DAREDEVIL">
+            <div class="box">
+                <img src="TOP SERIES/DAREDEVIL.jpg" alt="DAREDEVIL">
+                <h1 class="movie-name">DAREDEVIL</h1>
+                <img class="ott" src="OTT IMAGE/jio hoster.jpeg" alt="JIO HOSTER" title="JIO HOSTER">
+                <div class="watch">
+                    <button>Watch Now</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.netflix.com/in/title/81762715" target="_blank" class="movie-link"
+            title="ALICE IN BORDERLAND">
+            <div class="box">
+                <img src="TOP SERIES/ALICE IN BORDERLAND.jpeg" alt="ALICE IN BORDERLAND">
+                <h1 class="movie-name">ALICE IN BORDERLAND</h1>
+                <img class="ott" src="OTT IMAGE/NETFLIX.png" alt="Netflix" title="NETFLIX">
+                <div class="watch">
+                    <button>Watch Now</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.netflix.com/in/title/81762715" target="_blank" class="movie-link" title="GAME OF THRONES">
+            <div class="box">
+                <img src="TOP SERIES/GAME OF THRONES.jpg" alt="GAME OF THRONES">
+                <h1 class="movie-name">GAME OF THRONES</h1>
+                <img class="ott" src="OTT IMAGE/jio hoster.jpeg" alt="JIO HOSTER" title="JIO HOSTER">
+                <div class="watch">
+                    <button>Watch Now</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.netflix.com/in/title/81762715" target="_blank" class="movie-link" title="MONEY KEIST">
+            <div class="box">
+                <img src="TOP SERIES/MONEY KEIST.jpeg" alt="MONEY KEIST">
+                <h1 class="movie-name">MONEY KEIST</h1>
+                <img class="ott" src="OTT IMAGE/NETFLIX.png" alt="Netflix" title="NETFLIX">
+                <div class="watch">
+                    <button>Watch Now</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.netflix.com/in/title/81762715" target="_blank" class="movie-link" title="OUR PLANET">
+            <div class="box">
+                <img src="TOP SERIES/OUR PLANET.jpg" alt="OUR PLANET">
+                <h1 class="movie-name">OUR PLANET</h1>
+                <img class="ott" src="OTT IMAGE/NETFLIX.png" alt="Netflix" title="NETFLIX">
+                <div class="watch">
+                    <button>Watch Now</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.netflix.com/in/title/81762715" target="_blank" class="movie-link" title="ADOLESCENCE">
+            <div class="box">
+                <img src="TOP SERIES/ADOLESCENCE.jpg" alt="ADOLESCENCE">
+                <h1 class="movie-name">ADOLESCENCE</h1>
+                <img class="ott" src="OTT IMAGE/NETFLIX.png" alt="Netflix" title="NETFLIX">
+                <div class="watch">
+                    <button>Watch Now</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.netflix.com/in/title/81762715" target="_blank" class="movie-link" title="CHERNOBYI">
+            <div class="box">
+                <img src="TOP SERIES/CHERNOBYI.jpg" alt="CHERNOBYI">
+                <h1 class="movie-name">CHERNOBYI</h1>
+                <img class="ott" src="OTT IMAGE/jio hoster.jpeg" alt="JIO HOSTER" title="JIO HOSTER">
+                <div class="watch">
+                    <button>Watch Now</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.netflix.com/in/title/81762715" target="_blank" class="movie-link"
+            title="AVATAR THE LAST AIRBENDER">
+            <div class="box">
+                <img src="TOP SERIES/AVATAR THE LAST AIRBENDER.jpg" alt="AVATAR THE LAST AIRBENDER">
+                <h1 class="movie-name">AVATAR THE LAST AIRBENDER</h1>
+                <img class="ott" src="OTT IMAGE/NETFLIX.png" alt="Netflix" title="NETFLIX">
+                <div class="watch">
+                    <button>Watch Now</button>
+                </div>
+            </div>
+        </a>
+
+        <!-- part 2 -->
+
+        <a href="https://www.netflix.com/in/title/81762715" target="_blank" class="movie-link" title="DRAGON">
+            <div class="box">
+                <img src="NEW MOVIES/DRAGON.jpg" alt="DRAGON">
+                <h1 class="movie-name">DRAGON</h1>
+                <img class="ott" src="OTT IMAGE/NETFLIX.png" alt="Netflix" title="NETFLIX">
+                <div class="watch">
+                    <button>Watch Now</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.primevideo.com/region/eu/detail/Fight-or-Flight/0PM4Q28M7U4QN3Z9K393G6JNZ9" target="_blank"
+            title="FIGHT OR FLIGHT " class="movie-link">
+            <div class="box">
+                <img src="NEW MOVIES/fight or flight.jpg" alt="FIGHT OR FLIGHT">
+                <h1 class="movie-name">FIGHT OR FLIGHT</h1>
+                <img class="ott" src="OTT IMAGE/Amazon-Prime.png" alt="Prime" title="PRIME VIDEO">
+                <div class="watch">
+                    <button>Watch Now</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.primevideo.com/region/eu/detail/Fight-or-Flight/0PM4Q28M7U4QN3Z9K393G6JNZ9" target="_blank"
+            title="HEART EYES" class="movie-link">
+            <div class="box">
+                <img src="NEW MOVIES/HEART EYES.jpg" alt="HEART EYES">
+                <h1 class="movie-name">HEART EYES</h1>
+                <img class="ott" src="OTT IMAGE/Amazon-Prime.png" alt="Prime" title="PRIME VIDEO">
+                <div class="watch">
+                    <button>Watch Now</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.zee5.com/te/movies/details/kudumbasthan/0-0-1z5715023" target="_blank" class="movie-link"
+            title="KUDUMBASTHAN">
+            <div class="box">
+                <img src="NEW MOVIES/Kudumbasthan.jpg" alt="KUDUMBASTHAN">
+                <h1 class="movie-name">KUDUMBASTHAN</h1>
+                <img class="ott" src="OTT IMAGE/zee5.png" alt="Zee5" title="ZEE5">
+                <div class="watch">
+                    <button>Watch Now</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.primevideo.com/detail/Nilavuku-En-Mel-Ennadi-Kobam/0KW6K5R5HM5QKM3GIIX4XGEHPS"
+            target="_blank" class="movie-link" title="NULAVUKU-EN-MEL-ENNADI-KOBAM">
+            <div class="box">
+                <img src="NEW MOVIES/Nilavuku-En-Mel-Ennadi-Kobam.jpg" alt="NULAVUKU-EN-MEL-ENNADI-KOBAM">
+                <h1 class="movie-name" style="font-size: 12px;">NULAVUKU-EN-MEL-ENNADI-KOBAM</h1>
+                <img class="ott" src="OTT IMAGE/Amazon-Prime.png" alt="Prime" title="PRIME VIDEO">
+                <div class="watch">
+                    <button>Watch Now</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.primevideo.com/detail/October-8/0O8P433NSI8QCBX4K0M33NSPV5" target="_blank"
+            class="movie-link" title="OCTOMBER 8">
+            <div class="box">
+                <img src="NEW MOVIES/OCTOMBER 8.jpg" alt="OCTOMBER 8">
+                <h1 class="movie-name">OCTOMBER 8</h1>
+                <img class="ott" src="OTT IMAGE/Amazon-Prime.png" alt="Prime" title="PRIME VIDEO">
+                <div class="watch">
+                    <button>Watch Now</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.netflix.com/in/title/81680567" target="_blank" class="movie-link"
+            title="VENOM THE LAST DANCE">
+            <div class="box">
+                <img src="NEW MOVIES/Venom The last Dance.jpg" alt="VENOM">
+                <h1 class="movie-name">VENOM THE LAST DANCE</h1>
+                <img class="ott" src="OTT IMAGE/NETFLIX.png" alt="Netflix" title="NETFLIX">
+                <div class="watch">
+                    <button>Watch Now</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.netflix.com/in/title/81210788" target="_blank" class="movie-link" title="UNDER PARIS">
+            <div class="box">
+                <img src="NEW MOVIES/Under paris.jpg" alt="UNDER PARIS">
+                <h1 class="movie-name">UNDER PARIS</h1>
+                <img class="ott" src="OTT IMAGE/NETFLIX.png" alt="Netflix" title="NETFLIX">
+                <div class="watch">
+                    <button>Watch Now</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.netflix.com/in/title/81742615" target="_blank" class="movie-link" title="WEAK HERO">
+            <div class="box">
+                <img src="NEW MOVIES/Weak Hero.jpg" alt="WEAK HERO">
+                <h1 class="movie-name">WEAK HERO</h1>
+                <img class="ott" src="OTT IMAGE/NETFLIX.png" alt="Netflix" title="NETFLIX">
+                <div class="watch">
+                    <button>Watch Now</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.netflix.com/in/title/81246107" target="_blank" class="movie-link" title="THE LIFE LIST">
+            <div class="box">
+                <img src="NEW MOVIES/The life list.jpg" alt="THE LIFE LIST">
+                <h1 class="movie-name">THE LIFE LIST</h1>
+                <img class="ott" src="OTT IMAGE/NETFLIX.png" alt="Netflix" title="NETFLIX">
+                <div class="watch">
+                    <button>Watch Now</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.netflix.com/in/title/81728596" target="_blank" class="movie-link" title="AMARAN">
+            <div class="box">
+                <img src="NEW MOVIES/Amaran.jpg" alt="AMARAN">
+                <h1 class="movie-name">AMARAN</h1>
+                <img class="ott" src="OTT IMAGE/NETFLIX.png" alt="Netflix" title="NETFLIX">
+                <div class="watch">
+                    <button>Watch Now</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.hotstar.com/1271406042" target="_blank" class="movie-link" title="SWEET-HEART">
+            <div class="box">
+                <img src="NEW MOVIES/sweet-heart.jpg" alt="SWEET-HEART">
+                <h1 class="movie-name">SWEET HEART!</h1>
+                <img class="ott" src="OTT IMAGE/jio hoster.jpeg" alt="jio hoster" title="JIO HOSTER">
+                <div class="watch">
+                    <button>Watch Now</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.primevideo.com/region/eu/detail/Fight-or-Flight/0PM4Q28M7U4QN3Z9K393G6JNZ9" target="_blank"
+            class="movie-link" title="BADAVA">
+            <div class="box">
+                <img src="NEW MOVIES/badava.jpg" alt="BADAVA">
+                <h1 class="movie-name">BADAVA</h1>
+                <img class="ott" src="OTT IMAGE/Amazon-Prime.png" alt="Prime" title="PRIME VIDEO">
+                <div class="watch">
+                    <button>Watch Now</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.netflix.com/in/title/81644287" target="_blank" class="movie-link" title="VIDAMUYARCHI">
+            <div class="box">
+                <img src="NEW MOVIES/Vidamuyarchi.jpg" alt="VIDAMUYARCHI">
+                <h1 class="movie-name">VIDAMUYARCHI</h1>
+                <img class="ott" src="OTT IMAGE/NETFLIX.png" alt="Netflix" title="NETFLIX">
+                <div class="watch">
+                    <button>Watch Now</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.airtelxstream.in/movies/see-saw-twisted-balance-of-life/AHA_MOVIE_52CE7A3D-9A98-4C98-B852-923EE41DD684"
+            target="_blank" class="movie-link" title="SEESAW">
+            <div class="box">
+                <img src="NEW MOVIES/seesaw.jpg" alt="SEESAW">
+                <h1 class="movie-name">SEESAW</h1>
+                <img class="ott" src="OTT IMAGE/AIRTEL XSTREAM.jpeg" alt="AIRTEL XSTREAM" title="AIRTEL XSTREAM">
+                <div class="watch">
+                    <button>Watch Now</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.sunnxt.com/telugu-movie-ramam-raghavam-telugu-2025/detail/216853" title="RAMAM RAGHAVAM"
+            target="_blank" class="movie-link">
+            <div class="box">
+                <img src="NEW MOVIES/ramam raghavam.jpg" alt="RAMAM RAGHAVAM">
+                <h1 class="movie-name">RAMAM RAGHAVAM</h1>
+                <img class="ott" src="OTT IMAGE/SUN.png" alt="SUN NEXT" title="SUN NEXT">
+                <div class="watch">
+                    <button>Watch Now</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.primevideo.com/region/eu/detail/Fight-or-Flight/0PM4Q28M7U4QN3Z9K393G6JNZ9" target="_blank"
+            class="movie-link" title="PADDINGTON IN PERU">
+            <div class="box">
+                <img src="NEW MOVIES/Paddington in Peru.jpg" alt="PADDINGTON IN PERU">
+                <h1 class="movie-name">PADDINGTON IN PERU</h1>
+                <img class="ott" src="OTT IMAGE/Amazon-Prime.png" alt="Amazon-Prime" title="AMAZON PRIME">
+                <div class="watch">
+                    <button>Watch Now</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.youtube.com/watch?v=ZnH_2I0WoFQ" target="_blank" class="movie-link" title="RETRO">
+            <div class="box">
+                <img src="NEW MOVIES/RETRO.jpg" alt="RETRO">
+                <h1 class="movie-name">RETRO</h1>
+                <img class="ott" src="OTT IMAGE/NETFLIX.png" alt="Netflix" title="NETFLIX">
+                <div class="watch">
+                    <button>Watch Now</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.primevideo.com/detail/Wolf-Man/0L5TI0FCN4QRNM0TI7BNS4GD55" title="WOLF-MAN" target="_blank"
+            class="movie-link">
+            <div class="box">
+                <img src="NEW MOVIES/WOLF MAN.jpg" alt="WOLF MAN">
+                <h1 class="movie-name">WOLF MAN</h1>
+                <img class="ott" src="OTT IMAGE/Amazon-Prime.png" alt="Amazon-Prime" title="AMAZON PRIME">
+                <div class="watch">
+                    <button>Watch Now</button>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.sonyliv.com/movies/pravinkoodu-shappu-1090476541" title="PRAVINKOODU" target="_blank"
+            class="movie-link">
+            <div class="box">
+                <img src="NEW MOVIES/PRAVINKOODU SHAPPU.jpg" alt="PRAVINKOODU SHAPPU">
+                <h1 class="movie-name">PRAVINKOODU SHAPPU</h1>
+                <img class="ott" src="OTT IMAGE/SONY.png" alt="SONY LIV" title="SONY LIV">
+                <div class="watch">
+                    <button>Watch Now</button>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <script>
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const search = document.getElementById("search");
+            const boxes = document.querySelectorAll(".box");
+
+            search.addEventListener("keyup", function (event) {
+                const searchValue = event.target.value.toUpperCase();
+
+                boxes.forEach(box => {
+                    const movieName = box.querySelector(".movie-name").textContent.toUpperCase();
+                    if (movieName.includes(searchValue)) {
+                        box.parentElement.style.display = "block";
+                    } else {
+                        box.parentElement.style.display = "none";
+                    }
+                });
+            });
+
+            let container = document.getElementById("#container");
+            container.addEventListener("wheel", function (e) {
+                e.preventDefault();
+                container.scrollLeft += e.deltaX;
+            })
+        });
+    </script>
+</body>
+
+</html>
