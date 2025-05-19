@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-list</title>
+</head>
+<style>
+    body {
+        background-color: rgb(37, 35, 35);
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        height: 150px;
+        box-shadow: white 1px 2px 14px 4px;
+        color: red;
+        border: 1px solid white;
+        padding: 10px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {}
+
+    .box input {
+        width: 70%;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+    }
+
+    .btn {
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        background-color: white;
+        cursor: pointer;
+    }
+    .list{
+        color:white;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h2>To-Do-List</h2>
+        <div class="box">
+            <input type="text"class="input">
+            <button class="btn">ADD</button>
+        </div>
+    </div>
+    <div class="list">
+    <h1>List</h1>
+    </div>
+
+    <script>
+    let btn = document.querySelector(".btn");
+    let input = document.querySelector(".input");
+    let ul = document.createElement("ul");
+    let list = document.querySelector(".list");
+    list.append(ul);
+
+    btn.addEventListener("click",function(){
+        let li = document.createElement("li");
+        li.innerHTML = input.value+"<button onclick = remove(event)> DELECT </button>";
+        input.value = " ";
+        ul.append(li);
+        
+    })
+
+    function remove(event){
+        event.target.parentElement.remove();
+    }
+
+    </script>
+</body>
+
+</html>

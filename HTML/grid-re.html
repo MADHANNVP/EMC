@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid practics</title>
+    <style>
+        .container{
+              display:grid;
+              grid-template-rows: 1fr 3fr 1fr;
+        }
+        .header{
+            background-color: red;
+        }
+        .main{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background-color: blue;
+        }
+        .right{
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        .footer{
+            background-color:white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="header">
+        heading
+    </div>
+    <div class="main">
+        <div class="left">world</div>
+        <div class="right">
+            <div class="le">image</div>
+            <div class="le">image</div>
+            <div class="le">image</div>
+        </div>
+    </div>
+    <div class="footer">
+        footer
+    </div>
+    </div>
+</body>
+</html>

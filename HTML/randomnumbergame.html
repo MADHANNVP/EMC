@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>random number</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: aquamarine;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .GAME-TITLE {
+            padding: 10px;
+            color: blueviolet;
+        }
+
+        .box {
+            width: 240px;
+            height: 200px;
+            border: 1px solid white;
+            box-shadow: white 1px 2px 24px 4px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box input {
+            width: 80%;
+            padding: 10px;
+            border-radius: 25px;
+            border: 2px solid black;
+            margin: 20px;
+            outline: none;
+        }
+
+        #btn {
+            padding: 10px;
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="GAME-TITLE">RANDOM NUMBER GAME</h1>
+        <div class="box">
+            <h2>GESS NUMBER</h2>
+            <input type="number" value="number" class="input" placeholder="Enter the number 1-100" onclick="remove()">
+            <button id="btn">submit</button>
+            <h2 class="ans"></h2>
+        </div>
+    </div>
+
+    <script>
+        let random = Math.floor(Math.random() * 10)
+        let btn = document.getElementById("btn");
+        let input = document.querySelector(".input")
+        let ans = document.querySelector(".ans")
+
+        btn.addEventListener("click", function () {
+            if (input.value == random) {
+                ans.textContent = "Your Answer is correct"
+                ans.style.color="green";
+            }
+            else {
+                ans.textContent = "Your Answer is Wrong"
+                ans.style.color="red";
+            }
+        })
+
+        function remove(){
+            ans.textContent = ""
+        }
+    </script>
+</body>
+
+</html>
